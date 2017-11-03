@@ -1,6 +1,6 @@
 
 
-knobSize = 75
+knobSize = 65
 knobMargin = knobSize/7
 knobAnimation = 0.5
 
