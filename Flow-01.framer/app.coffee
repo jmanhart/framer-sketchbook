@@ -1,3 +1,14 @@
+# {rubber, } = require "myModule"
+# 
+# 
+# 
+# print myFunction
+
+{test} = require "rubberDuck"
+
+rubber()
+
+
 # Pages 
 pageOne = new Layer
 	size: Screen.size
@@ -47,22 +58,38 @@ tabBarContainer = new Layer
 
 tabs = []
 
-for i in [0...tabs]
+tabData = [
+	{
+		label: "Tab One"
+	},
+	{
+		label: "Tab Two"
+	},
+	{
+		label: "Tab Three"
+	},
+	{
+		label: "Tab Four"
+	},
+]
+
+for i in [0...tabCount]
 	tab = new Layer
 		parent: tabBarContainer
 		width: tabBarContainer.width / tabCount
 		height: tabBarContainer.height
 		x: (tabBarContainer.width / tabCount) * i
 		backgroundColor: null
-	
-	tabText = new TextLayer
-		parent: tab
-		fontSize: 16
-		color: "white"
-		x: Align.center()
-		y: Align.center()
-		text: "Tab #{i + 1}"
-		color: '#888888'
+		
+	for dude, i in tabData
+		tabText = new TextLayer
+			parent: tab
+			fontSize: 16
+			color: "white"
+			x: Align.center()
+			y: Align.center()
+			text: "dude"
+			color: '#888888'
 	
 	tabs.push tab
 	
