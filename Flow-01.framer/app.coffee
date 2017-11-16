@@ -1,3 +1,4 @@
+{Symbol} = require "symbols/Symbol"
 # {rubber, } = require "myModule"
 # 
 # 
@@ -6,7 +7,7 @@
 
 {test} = require "rubberDuck"
 
-rubber()
+test()
 
 
 # Pages 

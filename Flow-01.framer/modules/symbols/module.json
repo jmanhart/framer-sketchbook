@@ -1,0 +1,1 @@
+{"author":"Lukas Guschlbauer","dependencies":[],"description":"A module to create symbols in Framer","example":"example.coffee","github":"https://github.com/der-lukas/framer-Symbols","install":"Symbol.coffee","installed_count":143,"name":"Symbols","require":"{Symbol} = require 'Symbol'","thumb":"thumb.gif","unique_name":"symbols"}

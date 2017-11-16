@@ -1,6 +1,14 @@
-{GhostLayer} = require "tabBar"
+
+{TextInput, Dog} = require "TextInput"
+
+
+# 
+# tabBarModule()
+
+dude = new TextInput
 
 
 
-GhostLayer = new Layer
 
+dude.onTap ->
+	print "hello"
