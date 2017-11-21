@@ -1,4 +1,7 @@
-
+bkg = new BackgroundLayer
+	backgroundColor:'black'
+	
+	
 spacer = 15
 FPOfontSize = 12
 
@@ -33,8 +36,12 @@ buttonContainer = new Layer
 # 	width: buttonWidthInactive
 	height: buttonHeightActive
 	width: buttonWidthActive
+	backgroundColor: 'white'
 	borderRadius: "#{buttonBorderRadius}px #{buttonBorderRadius}px 0px 0px"
 	clip: true
+
+
+	
 
 buttonTitle = new Layer
 	parent: buttonContainer
