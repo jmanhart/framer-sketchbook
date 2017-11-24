@@ -4,6 +4,8 @@
 tabCount = 4
 
 tabBarHeight = 50
+navTopHeight = 60
+navTopBkgColor = "#121212"
 
 textXLarge = 22
 textLarge = 20
@@ -14,7 +16,9 @@ textXSmall = 10
 
 spacer = 20
 
-bkgColor = "#121212"
+bkgColor = "#E3E3E3"
+
+shadowColor01 = "rgba(0,0,0,0.1)"
 
 # Prototype – Data
 tabData = [
@@ -93,10 +97,30 @@ pageOneScroll = new ScrollComponent
 	parent: pageOne
 	size: pageOne.size
 	scrollHorizontal: false
+	
+pageOneHero = new Layer
+	parent: pageOneScroll.content
+	height: 350
+	y: Align.top(navTopHeight)
+	width: Screen.width
+	backgroundColor: 'pink'
+	shadowY: 2
+	shadowBlur: 4
+	shadowColor: shadowColor01
+	
+pageOneHeroCopy = new Layer
+	parent: pageOneHero
+	y: Align.bottom()
+	width: Screen.width
+	height: 150
+	backgroundColor: 'white'
 
-# pageOneContent = new pageContainer
-# 	parent: pageOneScroll.content
-# 	html:"Page One"
+
+
+	
+
+
+
 
 
 # Prototype – Page Two
@@ -168,9 +192,15 @@ for i in [0...tabCount]
 
 topBarContainer = new Layer
 	width: Screen.width
-	height: tabBarHeight*1.5
+	height: navTopHeight
 	y: Align.top()
-	backgroundColor: 'white'
+	backgroundColor: navTopBkgColor
+	
+pageTitle = new TextLayer
+	parent: topBarContainer
+	x: Align.center()
+	y: Align.center()
+	
 
 # Prototype – Routing 
 

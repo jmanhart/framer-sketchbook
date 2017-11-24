@@ -95,7 +95,7 @@ innerCircle = new Layer
 	borderRadius: 100
 	height: circleH / 2
 	width: circleW / 2 
-	backgroundColor: null
+	backgroundColor: 'pink'
 
 
 
