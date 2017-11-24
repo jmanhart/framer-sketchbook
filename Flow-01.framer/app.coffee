@@ -89,9 +89,15 @@ pageOne = new Layer
 	size: Screen.size
 	backgroundColor: bkgColor
 	
-pageOneContent = new pageContainer
+pageOneScroll = new ScrollComponent
 	parent: pageOne
-	html:"Page One"
+	size: pageOne.size
+	scrollHorizontal: false
+
+# pageOneContent = new pageContainer
+# 	parent: pageOneScroll.content
+# 	html:"Page One"
+
 
 # Prototype – Page Two
 pageTwo = new Layer
