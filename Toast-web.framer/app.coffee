@@ -1,5 +1,5 @@
 bkg = new BackgroundLayer
-	backgroundColor:'black'
+	backgroundColor:'#121212'
 	
 	
 spacer = 15
@@ -32,10 +32,10 @@ class chevron extends Layer
 buttonContainer = new Layer
 	x: Align.center()
 	y: Align.bottom()
-# 	height: buttonHeightInactive
-# 	width: buttonWidthInactive
-	height: buttonHeightActive
-	width: buttonWidthActive
+	height: buttonHeightInactive
+	width: buttonWidthInactive
+# 	height: buttonHeightActive
+# 	width: buttonWidthActive
 	backgroundColor: 'white'
 	borderRadius: "#{buttonBorderRadius}px #{buttonBorderRadius}px 0px 0px"
 	clip: true
