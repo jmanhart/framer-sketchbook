@@ -1,7 +1,7 @@
 # Prototype – Variables
 
 
-tabCount = 4
+tabCount = 3
 
 
 navTopHeight = 64
@@ -96,31 +96,39 @@ class pageContainer extends Layer
 # 				opacity: 0
 
 #### Prototype – Page One
+# pageOne = new Layer
+# 	size: Screen.size
+# 	backgroundColor: bkgColor
+# 	
+# pageOneScroll = new ScrollComponent
+# 	parent: pageOne
+# 	size: pageOne.size
+# 	scrollHorizontal: false
+# 	
+# pageOneHero = new Layer
+# 	parent: pageOneScroll.content
+# 	height: 350
+# 	y: Align.top(navTopHeight)
+# 	width: Screen.width
+# 	backgroundColor: 'pink'
+# 	shadowY: 2
+# 	shadowBlur: 4
+# 	shadowColor: shadowColor01
+# 	
+# pageOneHeroCopy = new Layer
+# 	parent: pageOneHero
+# 	y: Align.bottom()
+# 	width: Screen.width
+# 	height: 150
+# 	backgroundColor: 'white'
+
 pageOne = new Layer
 	size: Screen.size
 	backgroundColor: bkgColor
 	
-pageOneScroll = new ScrollComponent
+pageOneContent = new pageContainer
 	parent: pageOne
-	size: pageOne.size
-	scrollHorizontal: false
-	
-pageOneHero = new Layer
-	parent: pageOneScroll.content
-	height: 350
-	y: Align.top(navTopHeight)
-	width: Screen.width
-	backgroundColor: 'pink'
-	shadowY: 2
-	shadowBlur: 4
-	shadowColor: shadowColor01
-	
-pageOneHeroCopy = new Layer
-	parent: pageOneHero
-	y: Align.bottom()
-	width: Screen.width
-	height: 150
-	backgroundColor: 'white'
+	html:"Page One"
 
 
 
@@ -222,14 +230,15 @@ pageTitle = new TextLayer
 
 
 # Tap Events for the Bottom Navigation Bar
+
 tabs[0].onClick ->
 	flow.showNext(pageOne, animate: false)
-	
+
 tabs[1].onClick ->
 	flow.showNext(pageTwo, animate: false)
 	
 tabs[2].onClick ->
 	flow.showNext(pageThree, animate: false)
 	
-tabs[3].onClick ->
-	flow.showNext(pageFour, animate: false)
+# tabs[3].onClick ->
+# 	flow.showNext(pageFour, animate: false)
