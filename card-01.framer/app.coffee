@@ -3,7 +3,7 @@ bkg = new BackgroundLayer
 
 spacer = 5
 
-fpoColor = 'rgba(0,0,0,0.2)'
+fpoColor = 'rgba(0,0,0,0.0)'
 
 cardDetailsContainerHeight = 50
 cardImageContainerHeight = 200
@@ -27,7 +27,16 @@ cardDetailsContainer = new Layer
 	width: cardContainer.width
 	height: cardDetailsContainerHeight
 	backgroundColor: fpoColor
-
+	
+cardDetailsTumbnail = new Layer
+	parent: cardDetailsContainer
+	size: cardDetailsContainer.height - (spacer*4)
+	x: Align.left(spacer*2)
+	y: Align.center
+	borderRadius: spacer*5
+	
+	
+	
 # Component - Card Image	
 cardImageContainer = new Layer
 	parent: cardContainer
@@ -41,8 +50,12 @@ cardImage = new Layer
 	x: Align.center()
 	y: Align.center()
 	width: cardImageContainer.width - (spacer*4)
-	height: cardImageContainer.height - (spacer*4)
-
+	height: cardImageContainer.height - (spacer*0)
+	
+	
+	
+	
+	
 # Component - Card Info
 cardInfoContainer = new Layer
 	parent: cardContainer
