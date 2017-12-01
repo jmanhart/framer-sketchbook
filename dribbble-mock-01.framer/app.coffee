@@ -33,35 +33,40 @@ screenFrame = new Layer
 scroll = new ScrollComponent
 	parent: screenFrame
 	size: screenFrame.size
-	backgroundColor: 'yellow'
+	backgroundColor: null
 	scrollHorizontal: false
 
 heroContainer = new Layer
-	parent: scroll.content
+	parent: screenFrame
 	height: 200
 	width: screenFrame.width
-	backgroundColor: 'red'
+	backgroundColor: "#7785EE"
 	
 heroThumbnail = new Layer
 	parent: heroContainer
-	size: 90
+	size: 110
+	backgroundColor: 'rgba(0,0,0,0.1)'
 	borderRadius: 90
 	x: Align.center
 	y: Align.center
 	
 tabContainer = new Layer
-	parent: scroll.content
+	parent: screenFrame
 	height: 60
 	width: screenFrame.width
 	y: heroContainer.height
-	backgroundColor: 'teal'
+	backgroundColor: 'white'
 	
 scrollContent = new Layer
 	parent: scroll.content
 	y: heroContainer.height + tabContainer.height
 	width: screenFrame.width
 	height: 1000 
-	backgroundColor: 'gray'
+	backgroundColor: '#E8E8E8'
 	clip: true
 
 
+scroll.content.on "change:y", ->
+# 	Utils.modulate(value, [a, a], [b, b], limit)
+	heroContainer.height = Utils.modulate(scroll.scrollY, [scroll.width*0, 100], [200, 60], true)
+	tabContainer.y = Utils.modulate(scroll.scrollY, [scroll.width*0, 100], [200, 60], true)
