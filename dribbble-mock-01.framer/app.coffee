@@ -2,6 +2,9 @@ bkg = new BackgroundLayer
 	backgroundColor: "#7493FC"
 
 circleSmallSize = 500
+heroContainerHeight = 200
+
+
 
 bkCircleSmall = new Layer
 	size: circleSmallSize
@@ -42,14 +45,14 @@ heroContainer = new Layer
 	width: screenFrame.width
 	backgroundColor: "#7785EE"
 	
-heroThumbnail = new Layer
-	parent: heroContainer
-	size: 110
-	backgroundColor: 'rgba(0,0,0,0.1)'
-	borderRadius: 90
-	x: Align.center
-	y: Align.center
-	
+# heroThumbnail = new Layer
+# 	parent: heroContainer
+# 	size: 110
+# 	backgroundColor: 'rgba(0,0,0,0.1)'
+# 	borderRadius: 90
+# 	x: Align.center
+# 	y: Align.center
+# 	
 tabContainer = new Layer
 	parent: screenFrame
 	height: 60
@@ -59,7 +62,7 @@ tabContainer = new Layer
 	
 scrollContent = new Layer
 	parent: scroll.content
-	y: heroContainer.height + tabContainer.height
+	y: heroContainer.height 
 	width: screenFrame.width
 	height: 1000 
 	backgroundColor: '#E8E8E8'
@@ -68,5 +71,6 @@ scrollContent = new Layer
 
 scroll.content.on "change:y", ->
 # 	Utils.modulate(value, [a, a], [b, b], limit)
-	heroContainer.height = Utils.modulate(scroll.scrollY, [scroll.width*0, 100], [200, 60], true)
-	tabContainer.y = Utils.modulate(scroll.scrollY, [scroll.width*0, 100], [200, 60], true)
+	heroContainer.height = Utils.modulate(scroll.scrollY, [scroll.width*0, heroContainerHeight], [heroContainerHeight,50], true)
+	tabContainer.y = Utils.modulate(scroll.scrollY, [scroll.width*0, heroContainerHeight], [200, 50], true)
+
