@@ -45,20 +45,15 @@ heroContainer = new Layer
 	width: screenFrame.width
 	backgroundColor: "#7785EE"
 	
-# heroThumbnail = new Layer
-# 	parent: heroContainer
-# 	size: 110
-# 	backgroundColor: 'rgba(0,0,0,0.1)'
-# 	borderRadius: 90
-# 	x: Align.center
-# 	y: Align.center
-# 	
 tabContainer = new Layer
 	parent: screenFrame
 	height: 60
 	width: screenFrame.width
 	y: heroContainer.height
 	backgroundColor: 'white'
+	shadowY: 2
+	shadowColor:'rgba(0,0,0,0.15)'
+	shadowBlur: 5
 	
 scrollContent = new Layer
 	parent: scroll.content
@@ -71,6 +66,6 @@ scrollContent = new Layer
 
 scroll.content.on "change:y", ->
 # 	Utils.modulate(value, [a, a], [b, b], limit)
-	heroContainer.height = Utils.modulate(scroll.scrollY, [scroll.width*0, heroContainerHeight], [heroContainerHeight,50], true)
-	tabContainer.y = Utils.modulate(scroll.scrollY, [scroll.width*0, heroContainerHeight], [200, 50], true)
+	heroContainer.height = Utils.modulate(scroll.scrollY, [scroll.width*0, heroContainerHeight], [heroContainerHeight,45], true)
+	tabContainer.y = Utils.modulate(scroll.scrollY, [scroll.width*0, heroContainerHeight], [200, 45], true)
 
