@@ -1,95 +1,107 @@
 bkg = new BackgroundLayer
-	backgroundColor: "#D8E1E3"
-
-spacer = 5
-
-fpoColor = 'rgba(0,0,0,0.0)'
-
-cardDetailsContainerHeight = 50
-cardImageContainerHeight = 200
-cardInfoContainerHeight = 100
-cardContainerHeight = cardDetailsContainerHeight + cardImageContainerHeight + cardInfoContainerHeight
-
-
-
-cardContainer = new Layer
-	width: Screen.width - (spacer*4)
-	height: cardContainerHeight
-	x: Align.center()
-	y: Align.center()
 	backgroundColor: 'white'
-	borderRadius: spacer*2
-	clip: true
+
+gradient = new Gradient
+	start: "rgba(0,0,0,0.8)"
+	end: "rgba(0,0,0,0.0)"
 	
-# Component - Card Details
-cardDetailsContainer = new Layer
-	parent: cardContainer
-	width: cardContainer.width
-	height: cardDetailsContainerHeight
-	backgroundColor: fpoColor
-	
-cardDetailsTumbnail = new Layer
-	parent: cardDetailsContainer
-	size: cardDetailsContainer.height - (spacer*4)
-	x: Align.left(spacer*2)
-	y: Align.center
-	borderRadius: spacer*5
-	
-	
-	
-# Component - Card Image	
-cardImageContainer = new Layer
-	parent: cardContainer
-	y: cardDetailsContainerHeight
-	width: cardDetailsContainer.width
-	height: cardImageContainerHeight
-	backgroundColor: fpoColor
-	
-cardImage = new Layer
-	parent: cardImageContainer
-	x: Align.center()
-	y: Align.center()
-	width: cardImageContainer.width - (spacer*4)
-	height: cardImageContainer.height - (spacer*0)
-	
-	
-	
-	
-	
-# Component - Card Info
-cardInfoContainer = new Layer
-	parent: cardContainer
-	y: cardDetailsContainerHeight + cardImageContainerHeight
-	width: cardDetailsContainer.width
-	height: cardInfoContainerHeight
-	backgroundColor: fpoColor
+gradientTop = new Gradient
+	end: "rgba(0,0,0,0.2)"
+	start: "rgba(0,0,0,0.0)"
+
+labelColor = "rgba(255,255,255, 1)"
+
+spacer = 20
+
+# Data Cards
+cardData = [
+	{
+		topic: "This is a title",
+		header: "Four dollar toast bottle mug",
+		subHeader: "Flexitarian hell of echo park street art. Lomo chillwave raclette church-key ",
+	},
+	{
+		topic: "This is a title",
+		header: "Four dollar toast bottle mug",
+		subHeader: "Flexitarian hell of echo park street art. Lomo chillwave raclette church-key ",
+	},
+	{
+		topic: "This is a title",
+		header: "Four dollar toast bottle mug",
+		subHeader: "Flexitarian hell of echo park street art. Lomo chillwave raclette church-key ",
+	},
+]
+
+# Scrolling Container
+scroll = new ScrollComponent
+	width: Screen.width
+	height: Screen.height
 
 
+scroll.scrollHorizontal = false
 
-
-
-
-# # Variables
-# pageCount = 8
-# gutter = 60
-# 
-# # Create PageComponent
-# pageScroller = new PageComponent
-# 	point: Align.center
-# 	width: Screen.width / 2
-# 	height: Screen.height / 2
-# 	scrollVertical: false
-# 	clip: false
-# 
-# # Loop to create pages
-# for index in [0...pageCount]
-# 	page = new Layer
-# 		size: pageScroller.size
-# 		x: (pageScroller.width + gutter) * index
-# 		backgroundColor: "#00AAFF"
-# 		hueRotate: index * 20
-# 		parent: pageScroller.content
-# 
-# 	page.onClick ->
-# 		pageScroller.snapToPage(this)
-
+for i in [0...cardData.length]
+	card = new Layer
+		parent: scroll.content
+		width: Screen.width*0.85
+		height: Screen.width*0.95
+		x: Align.center()
+		y: 380 * i
+		borderRadius: 10
+		backgroundColor: 'gray'
+		image: Utils.randomImage()
+		clip: true
+		
+	title = new TextLayer
+		parent: card
+		text: cardData[i].topic
+		x: Align.left(spacer)
+		y: Align.top(spacer)
+		width: (card.width - (spacer*2))
+		fontSize: 12
+		textTransform: 'uppercase'
+		color: labelColor
+		
+	mainLabel = new TextLayer
+		parent: card
+		text: "Four dollar toast bottle mug"
+		x: Align.left(spacer)
+		y: Align.top((spacer*1.25) + title.y)
+		width: (card.width - (spacer*4))
+		fontSize: 28
+		fontWeight: 'bold'
+		lineHeight: 1.25
+		color: labelColor
+		
+	bottomeLabel = new TextLayer
+		parent: card
+		text: "Flexitarian hell of echo park street art. Lomo chillwave raclette church-key "
+		x: Align.left(spacer)
+		y: Align.bottom(-spacer)
+		fontSize: 14
+		lineHeight: 1.75
+		width: (card.width - (spacer*2))
+		color: labelColor
+	
+	colorOverLay = new Layer
+		parent: card
+		width: card.width
+		height: card.height
+		backgroundColor: "#4455BB"
+		opacity: 0.5
+	
+	topDarken = new Layer
+		parent: card
+		width: card.width
+		y: Align.top()
+		gradient: gradientTop
+	
+	bottomDarken = new Layer
+		parent: card
+		width: card.width
+		y: Align.bottom()
+		gradient: gradient
+	
+	topDarken.sendToBack()
+	bottomDarken.sendToBack()
+	colorOverLay.sendToBack()
