@@ -49,4 +49,4 @@ for i in [0...offDevice.length]
 
 
 		
-print offDevice
+print onDevice
