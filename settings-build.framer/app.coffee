@@ -85,6 +85,8 @@ class rowBottom extends Layer
 				"align-items":"center"
 				"padding-left":"#{rowIndent}"
 
+turd = "new rowTop"
+
 dummy = [
 	{
 		poop:"rowTop"
@@ -95,7 +97,7 @@ dummy = [
 ]
 
 for i in [0...dummy.length]
-	dude = "new #{dummy[i].poop}"
+	dude = new Layer
 		x:Align.center()
 		y:Align.top(100 + (rowHeight * i))
 
