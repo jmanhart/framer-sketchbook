@@ -1,3 +1,5 @@
+bkg = new BackgroundLayer
+	backgroundColor: '#555555'
 screenFrame = new Layer
 	width: 375
 	height: Screen.height
@@ -40,6 +42,8 @@ listData = [
 
 
 for i in [0...listData.length]
+
+	# Wrapper - for each list Item
 	itemWrapper = new Layer
 		parent: screenFrame
 		width: screenFrame.width
@@ -47,12 +51,15 @@ for i in [0...listData.length]
 		y: Align.center(100 - (itemHeight*i))
 		backgroundColor: fpoColor
 		
+	# Container - for the checkmark pieces
 	checkContainer = new Layer
 		size: itemWrapper.height
 		parent: itemWrapper
 		backgroundColor: fpoColor
-		
+	
+	# Styling - of the actual checkmark box
 	check = new Layer
+		name: "checkbox-style"
 		parent: checkContainer
 		size: checkContainer.width/2.45
 		backgroundColor: null
@@ -62,19 +69,9 @@ for i in [0...listData.length]
 		x: Align.center()
 		y: Align.center()
 		
-	# Crossing out line
-	crossLine = new Layer
-		parent: itemWrapper
-		x: check.x
-		y:Align.center()
-		height: checkMarkThickness/1.5
-		width: check.width
-		backgroundColor: active01
-		opacity: 0
-	
-	
-	# Check Mark build
+	# Component - Checkmark Container
 	checkMarkContainer = new Layer
+		name: "checkmark-container"
 		parent: checkContainer
 		size: checkContainer.width/4.0
 		x: Align.center(-1)
@@ -82,8 +79,10 @@ for i in [0...listData.length]
 		rotation: -45
 		opacity: 0
 		backgroundColor: 'rgba(0,0,0,0.0)'
-		
+
+	# Component - Checkmark pieces (Long)
 	checkLineLong = new Layer
+		name: "checkmark-long"
 		parent: checkMarkContainer
 		x:Align.right()
 		y:Align.bottom()
@@ -92,7 +91,9 @@ for i in [0...listData.length]
 		backgroundColor: active01
 		borderRadius: 1.15
 		
+	# Component - Checkmark pieces (Short)
 	checkLineShort = new Layer
+		name: "checkmark-short"
 		parent: checkMarkContainer
 		x:Align.left() 
 		y:Align.bottom()
@@ -108,7 +109,16 @@ for i in [0...listData.length]
 		color: dark01
 		y:Align.center()
 		x: checkContainer.width 
-
+		
+	# Styling - Strike through line
+	crossLine = new Layer
+		parent: itemWrapper
+		x: check.x
+		y:Align.center()
+		height: checkMarkThickness/1.5
+		width: check.width
+		backgroundColor: active01
+		opacity: 0
 
 
 	# State MGMT
@@ -136,14 +146,14 @@ for i in [0...listData.length]
 	# Animation Options
 	crossLine.animationOptions =
 		curve: Spring(damping: 0.75)
-		
+		time: 0.5
+
 	checkMarkContainer.animationOptions = 
 		curve: Spring(damping: 0.35)
 	check.animationOptions = 
 		curve: Spring(damping: 0.55)
 	itemLabel.animationOptions =
 		curve: Spring(damping: 0.55)
-	
 	
 	# Interactions
 	do(crossLine) ->
