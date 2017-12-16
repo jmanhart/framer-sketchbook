@@ -8,6 +8,7 @@ screenFrame = new Layer
 	x:Align.center()
 
 itemHeight = 48
+itemWidth = 200
 spacer = 20
 checkMarkThickness = 3
 
@@ -16,11 +17,11 @@ fpoColor = 'rgba(0,0,0,0.0)'
 
 dark01 = '#444444'
 dark02 = '#777777'
-dark03 = '#BBBBBB'
+dark03 = '#DBDBDB'
 
 light01 = 'rgba(255,255,255,1)'
 light02 = '#DDDDDD'
-active01 = "#139CF1"
+active01 = "#4BDE95"
 listData = [
 	{
 		label: "Drink"
@@ -32,10 +33,10 @@ listData = [
 		label: "Bloom"
 	},
 	{
-		label: "Grind coffee"
+		label: "Grind Coffee"
 	},
 	{
-		label: "Rinse filter"
+		label: "Weigh Coffee"
 	}
 ]
 
@@ -46,9 +47,10 @@ for i in [0...listData.length]
 	# Wrapper - for each list Item
 	itemWrapper = new Layer
 		parent: screenFrame
-		width: screenFrame.width
+		width: (screenFrame.width - (spacer*2))
 		height: itemHeight
 		y: Align.center(100 - (itemHeight*i))
+		x: Align.center()
 		backgroundColor: fpoColor
 		
 	# Container - for the checkmark pieces
@@ -56,7 +58,7 @@ for i in [0...listData.length]
 		size: itemWrapper.height
 		parent: itemWrapper
 		backgroundColor: fpoColor
-	
+			
 	# Styling - of the actual checkmark box
 	check = new Layer
 		name: "checkbox-style"
@@ -119,7 +121,33 @@ for i in [0...listData.length]
 		width: check.width
 		backgroundColor: active01
 		opacity: 0
-
+		
+	# Container - for the override
+	overFlowContainer = new Layer
+		height: itemWrapper.height
+		width: (5*3)+(3*2)
+		parent: itemWrapper
+		x:Align.right()
+		backgroundColor: null
+	
+	overFlowMenu = new Layer
+		backgroundColor: 'rgba(0,0,0,0.6)'
+		parent: itemWrapper
+		x: Align.right(0)
+		y: Align.top(20)
+		opacity: 1
+		scale: 1
+		height: 130
+		width: 100
+			
+	for i in [0...3]
+		overflowDot = new Layer
+			parent: overFlowContainer
+			size: 5
+			borderRadius: 20
+			y:Align.center()
+			x: Align.left(8*i)
+			backgroundColor: dark03
 
 	# State MGMT
 	crossLine.states =
@@ -141,7 +169,10 @@ for i in [0...listData.length]
 		crossed:
 			color: dark03
 	
-	
+	overFlowMenu.states =
+		crossed:
+			opacity: 1
+			scale: 1.1
 	
 	# Animation Options
 	crossLine.animationOptions =
@@ -153,24 +184,28 @@ for i in [0...listData.length]
 	check.animationOptions = 
 		curve: Spring(damping: 0.55)
 	itemLabel.animationOptions =
-		curve: Spring(damping: 0.55)
+		instant: true
 	
 	# Interactions
 	do(crossLine) ->
-		itemWrapper.onTap ->
+		itemLabel.onTap ->
 			crossLine.stateCycle()
 			
 	do(checkMarkContainer) ->
-		itemWrapper.onTap ->
+		itemLabel.onTap ->
 			checkMarkContainer.stateCycle()
 			
 	do(check) ->
-		itemWrapper.onTap ->
+		itemLabel.onTap ->
 			check.stateCycle()
 			
 	do(itemLabel) ->
-		itemWrapper.onTap ->
+		itemLabel.onTap ->
 			itemLabel.stateCycle()
+			
+	do(overFlowMenu) ->
+		overFlowMenu.onTap ->
+			overFlowMenu.stateCycle()
 	
 	
 	
