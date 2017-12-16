@@ -24,19 +24,24 @@ light02 = '#DDDDDD'
 active01 = "#4BDE95"
 listData = [
 	{
-		label: "Drink"
+		label: "Drink",
+		bkgColor: "green",
 	},
 	{
-		label: "Pour"
+		label: "Pour",
+		bkgColor: "green",
 	},
 	{
-		label: "Bloom"
+		label: "Bloom",
+		bkgColor: "pink",
 	},
 	{
-		label: "Grind Coffee"
+		label: "Grind Coffee",
+		bkgColor: "yellow",
 	},
 	{
-		label: "Weigh Coffee"
+		label: "Weigh Coffee",
+		bkgColor: "blue",
 	}
 ]
 
@@ -131,11 +136,11 @@ for i in [0...listData.length]
 		backgroundColor: null
 	
 	overFlowMenu = new Layer
-		backgroundColor: 'rgba(0,0,0,0.6)'
+		backgroundColor: listData[i].bkgColor
 		parent: itemWrapper
 		x: Align.right(0)
 		y: Align.top(20)
-		opacity: 1
+		opacity: 0
 		scale: 1
 		height: 130
 		width: 100
@@ -204,7 +209,7 @@ for i in [0...listData.length]
 			itemLabel.stateCycle()
 			
 	do(overFlowMenu) ->
-		overFlowMenu.onTap ->
+		overFlowContainer.onTap ->
 			overFlowMenu.stateCycle()
 	
 	
