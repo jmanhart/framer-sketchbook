@@ -10,10 +10,6 @@ screenFrame = new Layer
 	x:Align.center()
 	x:Align.center()
 
-screenScroll = new ScrollComponent
-	parent: screenFrame
-	width: screenFrame.width
-	height: screenFrame.height
 
 itemHeight = 48
 itemWidth = 200
@@ -30,6 +26,8 @@ dark03 = '#DBDBDB'
 light01 = 'rgba(255,255,255,1)'
 light02 = '#DDDDDD'
 active01 = "#4BDE95"
+
+# List Data
 listData = [
 	{
 		label: "Drink",
@@ -45,19 +43,83 @@ listData = [
 	},
 	{
 		label: "Weigh Coffee",
-	}
+	},
+	{
+		label: "Weigh Coffee",
+	},
+	{
+		label: "Weigh Coffee",
+	},
+	{
+		label: "Weigh Coffee",
+	},
+	{
+		label: "Weigh Coffee",
+	},
+	{
+		label: "Weigh Coffee",
+	},
+	{
+		label: "Weigh Coffee",
+	},
+	{
+		label: "Drink",
+	},
+	{
+		label: "Pour",
+	},
+	{
+		label: "Bloom",
+	},
+	{
+		label: "Grind Coffee",
+	},
+	{
+		label: "Weigh Coffee",
+	},
+	{
+		label: "Weigh Coffee",
+	},
+	{
+		label: "Weigh Coffee",
+	},
+	{
+		label: "Weigh Coffee",
+	},
+	{
+		label: "Weigh Coffee",
+	},
+	{
+		label: "Weigh Coffee",
+	},
+	{
+		label: "Weigh Coffee",
+	},
 ]
 
+scrollContainer = new Layer
+	parent: screenFrame
+	width: screenFrame.width
+	x: Align.center()
+	y: Align.center()
+	height: 300
+	clip: true
+	backgroundColor: null
 
+listScroll = new ScrollComponent
+	parent: scrollContainer
+	width: screenFrame.width
+	height: screenFrame.height
+	scrollHorizontal: false
 
 for i in [0...listData.length]
+
 	# Wrapper - for each list Item
 	itemWrapper = new Layer
-		parent: screenFrame
-		width: (screenFrame.width - (spacer*2))
+		parent: listScroll.content
+		width: (screenFrame.width)
 		height: itemHeight
-		y: Align.center(100 - (itemHeight*i))
-		x: Align.center()
+		y: Align.top((itemHeight*i))
 		backgroundColor: fpoColor
 		
 	# Container - for the checkmark pieces
@@ -137,7 +199,7 @@ for i in [0...listData.length]
 		height: itemWrapper.height
 		width: (5*3)+(3*2)
 		parent: itemWrapper
-		x:Align.right()
+		x:Align.right(-spacer)
 		backgroundColor: null
 	
 	overFlowMenuWidth = 100
@@ -221,7 +283,7 @@ for i in [0...listData.length]
 			scale: 1
 			height: overFlowMenuHeight
 			width: overFlowMenuWidth
-			x: Align.right(-100)
+			x: Align.right(-115)
 	
 	overFlowScroll.states =
 		crossed: 

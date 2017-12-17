@@ -10,12 +10,12 @@
   "propertyPanelToggleStates" : {
 
   },
-  "projectId" : "F45BF884-E266-4CBF-9E8A-EB016B89BF28",
+  "projectId" : "1BDDF5B4-6259-486F-A1A0-9A50099C4811",
   "deviceOrientation" : 0,
   "selectedHand" : "",
-  "showBezel" : 0,
+  "showBezel" : false,
   "foldedCodeRanges" : [
-    "{416, 687}"
+
   ],
   "deviceScale" : 1
 }
