@@ -1,11 +1,19 @@
 bkg = new BackgroundLayer
-	backgroundColor: '#555555'
+	backgroundColor: '#AAA'
+	
+
+
 screenFrame = new Layer
 	width: 375
 	height: Screen.height
 	backgroundColor: 'white'
 	x:Align.center()
 	x:Align.center()
+
+screenScroll = new ScrollComponent
+	parent: screenFrame
+	width: screenFrame.width
+	height: screenFrame.height
 
 itemHeight = 48
 itemWidth = 200
@@ -25,30 +33,24 @@ active01 = "#4BDE95"
 listData = [
 	{
 		label: "Drink",
-		bkgColor: "green",
 	},
 	{
 		label: "Pour",
-		bkgColor: "green",
 	},
 	{
 		label: "Bloom",
-		bkgColor: "pink",
 	},
 	{
 		label: "Grind Coffee",
-		bkgColor: "yellow",
 	},
 	{
 		label: "Weigh Coffee",
-		bkgColor: "blue",
 	}
 ]
 
 
 
 for i in [0...listData.length]
-
 	# Wrapper - for each list Item
 	itemWrapper = new Layer
 		parent: screenFrame
@@ -126,7 +128,10 @@ for i in [0...listData.length]
 		width: check.width
 		backgroundColor: active01
 		opacity: 0
-		
+
+
+
+	
 	# Container - for the override
 	overFlowContainer = new Layer
 		height: itemWrapper.height
@@ -135,24 +140,60 @@ for i in [0...listData.length]
 		x:Align.right()
 		backgroundColor: null
 	
+	overFlowMenuWidth = 100
+	overFlowMenuHeight = 130
+	
 	overFlowMenu = new Layer
-		backgroundColor: listData[i].bkgColor
+		backgroundColor: 'rgba(255,255,255,1)'
+		shadowY: 2
+		shadowBlur: 3
+		shadowColor: 'rgba(0,0,0,0.4)'
 		parent: itemWrapper
 		x: Align.right(0)
 		y: Align.top(20)
 		opacity: 0
 		scale: 1
-		height: 130
-		width: 100
+		height: 0
+		width: 0
+		clip: true
+		
+	overFlowScroll = new ScrollComponent
+		parent: overFlowMenu
+		width: 0
+		height: 0
+	
+	for i in [0...8]
+		overItem = new Layer
+			parent: overFlowScroll.content
+			width: overFlowMenuWidth
+			height: 40
+			y: 42 * i
 			
+		do(overFlowMenu) ->
+			overItem.onTap ->
+				overFlowMenu.stateCycle()
+				
 	for i in [0...3]
 		overflowDot = new Layer
 			parent: overFlowContainer
 			size: 5
 			borderRadius: 20
-			y:Align.center()
+			y: Align.center()
 			x: Align.left(8*i)
 			backgroundColor: dark03
+
+# 	for i in [0...3]
+# 		overflowDot = new Layer
+# 			parent: overFlowContainer
+# 			size: 5
+# 			borderRadius: 20
+# 			x: Align.center()
+# 			y: Align.top(12+(8*i))
+# 			backgroundColor: dark03
+
+
+
+
 
 	# State MGMT
 	crossLine.states =
@@ -177,7 +218,19 @@ for i in [0...listData.length]
 	overFlowMenu.states =
 		crossed:
 			opacity: 1
-			scale: 1.1
+			scale: 1
+			height: overFlowMenuHeight
+			width: overFlowMenuWidth
+			x: Align.right(-100)
+	
+	overFlowScroll.states =
+		crossed: 
+			scale: 1
+			height: overFlowMenuHeight
+			width: overFlowMenuWidth
+			
+	
+	
 	
 	# Animation Options
 	crossLine.animationOptions =
@@ -190,6 +243,8 @@ for i in [0...listData.length]
 		curve: Spring(damping: 0.55)
 	itemLabel.animationOptions =
 		instant: true
+	overFlowMenu.animationOptions =
+		curve: Spring
 	
 	# Interactions
 	do(crossLine) ->
@@ -211,6 +266,10 @@ for i in [0...listData.length]
 	do(overFlowMenu) ->
 		overFlowContainer.onTap ->
 			overFlowMenu.stateCycle()
+
+	do(overFlowScroll) ->
+		overFlowContainer.onTap ->
+			overFlowScroll.stateCycle()
 	
 	
 	
