@@ -1,5 +1,5 @@
-bkg = new BackgroundLayer
-	backgroundColor: '#AAA'
+# bkg = new BackgroundLayer
+# 	backgroundColor: '#AAA'
 	
 
 
@@ -32,69 +32,14 @@ listData = [
 	{
 		label: "Drink",
 	},
-	{
-		label: "Pour",
-	},
-	{
-		label: "Bloom",
-	},
-	{
-		label: "Grind Coffee",
-	},
-	{
-		label: "Weigh Coffee",
-	},
-	{
-		label: "Weigh Coffee",
-	},
-	{
-		label: "Weigh Coffee",
-	},
-	{
-		label: "Weigh Coffee",
-	},
-	{
-		label: "Weigh Coffee",
-	},
-	{
-		label: "Weigh Coffee",
-	},
-	{
-		label: "Weigh Coffee",
-	},
-# 	{
-# 		label: "Drink",
-# 	},
-# 	{
-# 		label: "Pour",
-# 	},
-# 	{
-# 		label: "Bloom",
-# 	},
-# 	{
-# 		label: "Grind Coffee",
-# 	},
-# 	{
-# 		label: "Weigh Coffee",
-# 	},
-# 	{
-# 		label: "Weigh Coffee",
-# 	},
-# 	{
-# 		label: "Weigh Coffee",
-# 	},
-# 	{
-# 		label: "Weigh Coffee",
-# 	},
-# 	{
-# 		label: "Weigh Coffee",
-# 	},
-# 	{
-# 		label: "Weigh Coffee",
-# 	},
-# 	{
-# 		label: "Weigh Coffee",
-# 	},
+]
+
+overFlowItems = [
+	"dude",
+	"cat",
+	"parrot",
+	"dog",
+	"parrot",  
 ]
 
 scrollContainer = new Layer
@@ -106,20 +51,15 @@ scrollContainer = new Layer
 	clip: true
 	backgroundColor: null
 
-listScroll = new ScrollComponent
-	parent: scrollContainer
-	width: screenFrame.width
-	height: screenFrame.height
-	scrollHorizontal: false
 
 for i in [0...listData.length]
-
 	# Wrapper - for each list Item
 	itemWrapper = new Layer
-		parent: listScroll.content
+		parent: scrollContainer
 		width: (screenFrame.width)
 		height: itemHeight
-		y: Align.top((itemHeight*i))
+		y: Align.center()
+		x: Align.center()
 		backgroundColor: fpoColor
 		
 	# Container - for the checkmark pieces
@@ -217,39 +157,51 @@ for i in [0...listData.length]
 	# OverFlow - Menu 
 	overFlowMenu = new Layer
 		backgroundColor: 'rgba(255,255,255,1)'
-		shadowY: 2
-		shadowBlur: 3
-		shadowColor: 'rgba(0,0,0,0.4)'
 		parent: itemWrapper
 		x: Align.right(0)
 		y: Align.top(20)
 		opacity: 0
-		scale: 1
+		scale: 0
 		height: 0
 		width: 0
 		clip: true
+		shadow1: 
+			y: 1
+			blur: 3
+			color: 'rgba(0,0,0,0.4)'
+		shadow2: 
+			y: -1
+			blur: 3
+			color: 'rgba(0,0,0,0.1)'
 	
 	# OverFlow - items scrolling
 	overFlowScroll = new ScrollComponent
 		parent: overFlowMenu
 		width: 0
 		height: 0
+		scrollHorizontal: false
 	
 	# OverFlow - List Items
-	for i in [0...8]
-		overItem = new Layer
+	for i in [0...overFlowItems.length]
+		overFlowItem = new Layer
 			parent: overFlowScroll.content
 			width: overFlowMenuWidth
 			height: 40
 			y: 42 * i
-			backgroundColor: 'black'
+			backgroundColor: null
+			shadowY: 1
+			shadowColor: 'rgba(0,0,0,0.2)'
+		overFlowItemLabel = new TextLayer
+			text: overFlowItems[i]
+			parent: overFlowItem
+			fontSize: 16
+			x: Align.left(10)
+			y: Align.center()
 			
-		do(overFlowMenu) ->
-			overItem.onTap ->
-				overFlowMenu.stateCycle()
+# 		do(overFlowMenu) ->
+# 			overItem.onTap ->
+# 				overFlowMenu.stateCycle()
 				
-
-
 # 	for i in [0...3]
 # 		overflowDot = new Layer
 # 			parent: overFlowContainer
@@ -258,10 +210,6 @@ for i in [0...listData.length]
 # 			x: Align.center()
 # 			y: Align.top(12+(8*i))
 # 			backgroundColor: dark03
-
-
-
-
 
 	# State MGMT
 	crossLine.states =
@@ -315,10 +263,10 @@ for i in [0...listData.length]
 		instant: true
 		
 	overFlowMenu.animationOptions =
-		curve: Spring
+		curve: Spring(damping: 0.65)
 		
 	overFlowScroll.animationOptions =
-		curve: Spring
+		curve: Spring(damping: 0.65)
 	
 	
 	
@@ -339,6 +287,7 @@ for i in [0...listData.length]
 	do(itemLabel) ->
 		itemLabel.onTap ->
 			itemLabel.stateCycle()
+			
 			
 	do(overFlowMenu) ->
 		overFlowContainer.onTap ->
