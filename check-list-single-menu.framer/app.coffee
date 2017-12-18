@@ -35,9 +35,9 @@ listData = [
 ]
 
 overFlowItems = [
-	"dude",
-	"cat",
-	"parrot",
+	"Edit",
+	"Delete",
+	"Remove",
 	"dog",
 	"parrot",  
 ]
@@ -141,14 +141,14 @@ for i in [0...listData.length]
 		backgroundColor: null
 
 	# OverFlow - Icon
-	for i in [0...3]
-		overflowDot = new Layer
-			parent: overFlowContainer
-			size: 5
-			borderRadius: 20
-			y: Align.center()
-			x: Align.left(8*i)
-			backgroundColor: dark03
+# 	for i in [0...3]
+# 		overflowDot = new Layer
+# 			parent: overFlowContainer
+# 			size: 5
+# 			borderRadius: 20
+# 			y: Align.center()
+# 			x: Align.left(8*i)
+# 			backgroundColor: dark03
 			
 	# OverFlow - Variables
 	overFlowMenuWidth = 100
@@ -161,7 +161,7 @@ for i in [0...listData.length]
 		x: Align.right(0)
 		y: Align.top(20)
 		opacity: 0
-		scale: 0
+
 		height: 0
 		width: 0
 		clip: true
@@ -190,7 +190,7 @@ for i in [0...listData.length]
 			y: 42 * i
 			backgroundColor: null
 			shadowY: 1
-			shadowColor: 'rgba(0,0,0,0.2)'
+			shadowColor: 'rgba(0,0,0,0.1)'
 		overFlowItemLabel = new TextLayer
 			text: overFlowItems[i]
 			parent: overFlowItem
@@ -198,18 +198,18 @@ for i in [0...listData.length]
 			x: Align.left(10)
 			y: Align.center()
 			
-# 		do(overFlowMenu) ->
-# 			overItem.onTap ->
-# 				overFlowMenu.stateCycle()
+		do(overFlowMenu) ->
+			overFlowItem.onTap ->
+				overFlowMenu.stateCycle()
 				
-# 	for i in [0...3]
-# 		overflowDot = new Layer
-# 			parent: overFlowContainer
-# 			size: 5
-# 			borderRadius: 20
-# 			x: Align.center()
-# 			y: Align.top(12+(8*i))
-# 			backgroundColor: dark03
+	for i in [0...3]
+		overflowDot = new Layer
+			parent: overFlowContainer
+			size: 5
+			borderRadius: 20
+			x: Align.center()
+			y: Align.top(12+(8*i))
+			backgroundColor: dark03
 
 	# State MGMT
 	crossLine.states =
@@ -234,14 +234,15 @@ for i in [0...listData.length]
 	overFlowMenu.states =
 		crossed:
 			opacity: 1
-			scale: 1
+
 			height: overFlowMenuHeight
 			width: overFlowMenuWidth
-			x: Align.right(-115)
+			x: Align.right(-120)
+			y: 5
 	
 	overFlowScroll.states =
 		crossed: 
-			scale: 1
+
 			height: overFlowMenuHeight
 			width: overFlowMenuWidth
 			

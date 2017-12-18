@@ -6,12 +6,12 @@ bkg = new BackgroundLayer
 screenFrame = new Layer
 	width: 375
 	height: Screen.height
-	backgroundColor: 'white'
+# 	backgroundColor: 'rgba(255,255,255,0.5)'
 	x:Align.center()
 	x:Align.center()
 
 
-itemHeight = 48
+itemHeight = 60
 itemWidth = 200
 spacer = 20
 checkMarkThickness = 3
@@ -44,24 +44,24 @@ listData = [
 	{
 		label: "Weigh Coffee",
 	},
-	{
-		label: "Weigh Coffee",
-	},
-	{
-		label: "Weigh Coffee",
-	},
-	{
-		label: "Weigh Coffee",
-	},
-	{
-		label: "Weigh Coffee",
-	},
-	{
-		label: "Weigh Coffee",
-	},
-	{
-		label: "Weigh Coffee",
-	},
+# 	{
+# 		label: "Weigh Coffee",
+# 	},
+# 	{
+# 		label: "Weigh Coffee",
+# 	},
+# 	{
+# 		label: "Weigh Coffee",
+# 	},
+# 	{
+# 		label: "Weigh Coffee",
+# 	},
+# 	{
+# 		label: "Weigh Coffee",
+# 	},
+# 	{
+# 		label: "Weigh Coffee",
+# 	},
 # 	{
 # 		label: "Drink",
 # 	},
@@ -102,25 +102,32 @@ scrollContainer = new Layer
 	width: screenFrame.width
 	x: Align.center()
 	y: Align.center()
-	height: 300
+	height: 400
 	clip: true
 	backgroundColor: null
+	
 
 listScroll = new ScrollComponent
 	parent: scrollContainer
 	width: screenFrame.width
 	height: screenFrame.height
 	scrollHorizontal: false
+	backgroundColor: null
 
 for i in [0...listData.length]
 
 	# Wrapper - for each list Item
 	itemWrapper = new Layer
 		parent: listScroll.content
-		width: (screenFrame.width)
+		width: (screenFrame.width-spacer)
 		height: itemHeight
-		y: Align.top((itemHeight*i))
-		backgroundColor: fpoColor
+		x: Align.center(-spacer)
+		y: Align.top(((itemHeight+10)*i))
+		backgroundColor: 'white'
+		borderRadius: 10
+		shadowY: 2
+		shadowBlur:10
+		shadowColor: 'rgba(0,0,0,0.1)'
 		
 	# Container - for the checkmark pieces
 	checkContainer = new Layer
@@ -200,53 +207,7 @@ for i in [0...listData.length]
 		x:Align.right(-spacer)
 		backgroundColor: null
 
-	# OverFlow - Icon
-	for i in [0...3]
-		overflowDot = new Layer
-			parent: overFlowContainer
-			size: 5
-			borderRadius: 20
-			y: Align.center()
-			x: Align.left(8*i)
-			backgroundColor: dark03
-			
-	# OverFlow - Variables
-	overFlowMenuWidth = 100
-	overFlowMenuHeight = 130
-	
-	# OverFlow - Menu 
-	overFlowMenu = new Layer
-		backgroundColor: 'rgba(255,255,255,1)'
-		shadowY: 2
-		shadowBlur: 3
-		shadowColor: 'rgba(0,0,0,0.4)'
-		parent: itemWrapper
-		x: Align.right(0)
-		y: Align.top(20)
-		opacity: 0
-		scale: 1
-		height: 0
-		width: 0
-		clip: true
-	
-	# OverFlow - items scrolling
-	overFlowScroll = new ScrollComponent
-		parent: overFlowMenu
-		width: 0
-		height: 0
-	
-	# OverFlow - List Items
-	for i in [0...8]
-		overItem = new Layer
-			parent: overFlowScroll.content
-			width: overFlowMenuWidth
-			height: 40
-			y: 42 * i
-			backgroundColor: 'black'
-			
-		do(overFlowMenu) ->
-			overItem.onTap ->
-				overFlowMenu.stateCycle()
+
 				
 
 
@@ -283,22 +244,6 @@ for i in [0...listData.length]
 		crossed:
 			color: dark03
 	
-	overFlowMenu.states =
-		crossed:
-			opacity: 1
-			scale: 1
-			height: overFlowMenuHeight
-			width: overFlowMenuWidth
-			x: Align.right(-115)
-	
-	overFlowScroll.states =
-		crossed: 
-			scale: 1
-			height: overFlowMenuHeight
-			width: overFlowMenuWidth
-			
-	
-	
 	
 	# Animation Options
 	crossLine.animationOptions =
@@ -314,44 +259,27 @@ for i in [0...listData.length]
 	itemLabel.animationOptions =
 		instant: true
 		
-	overFlowMenu.animationOptions =
-		curve: Spring
-		
-	overFlowScroll.animationOptions =
-		curve: Spring
-	
-	
-	
 	
 	# Interactions
 	do(crossLine) ->
-		itemLabel.onTap ->
+		itemWrapper.onTap ->
 			crossLine.stateCycle()
 			
 	do(checkMarkContainer) ->
-		itemLabel.onTap ->
+		itemWrapper.onTap ->
 			checkMarkContainer.stateCycle()
 			
 	do(check) ->
-		itemLabel.onTap ->
+		itemWrapper.onTap ->
 			check.stateCycle()
 			
 	do(itemLabel) ->
-		itemLabel.onTap ->
+		itemWrapper.onTap ->
 			itemLabel.stateCycle()
 			
-	do(overFlowMenu) ->
-		overFlowContainer.onTap ->
-			overFlowMenu.stateCycle()
-
-	do(overFlowScroll) ->
-		overFlowContainer.onTap ->
-			overFlowScroll.stateCycle()
 	
 	
 	
 	# Layer Layering ha!
 	itemLabel.sendToBack()
-	overFlowMenu.bringToFront()
-	overFlowContainer.sendToBack()
-	overFlowScroll.bringToFront()
+
