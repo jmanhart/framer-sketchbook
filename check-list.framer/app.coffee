@@ -1,12 +1,12 @@
 bkg = new BackgroundLayer
-	backgroundColor: '#AAA'
+	backgroundColor: '#EDEDED'
 	
 
 
 screenFrame = new Layer
 	width: 375
 	height: Screen.height
-# 	backgroundColor: 'rgba(255,255,255,0.5)'
+	backgroundColor: 'rgba(255,255,255,0.0)'
 	x:Align.center()
 	x:Align.center()
 
@@ -14,6 +14,7 @@ screenFrame = new Layer
 itemHeight = 60
 itemWidth = 200
 spacer = 20
+gutter = 12
 checkMarkThickness = 3
 
 # Color
@@ -27,74 +28,52 @@ light01 = 'rgba(255,255,255,1)'
 light02 = '#DDDDDD'
 active01 = "#4BDE95"
 
+whiteBlend = new Gradient
+    start: "rgba(255, 255, 255, 0.2)"
+    end: "rgba(255, 255, 255, 1)"
+
 # List Data
 listData = [
 	{
-		label: "Drink",
-	},
-	{
-		label: "Pour",
-	},
-	{
-		label: "Bloom",
-	},
-	{
-		label: "Grind Coffee",
+		label: "Rinse Filter",
+		cat: "100 grams",
 	},
 	{
 		label: "Weigh Coffee",
+		cat: "24 grams",
 	},
-# 	{
-# 		label: "Weigh Coffee",
-# 	},
-# 	{
-# 		label: "Weigh Coffee",
-# 	},
-# 	{
-# 		label: "Weigh Coffee",
-# 	},
-# 	{
-# 		label: "Weigh Coffee",
-# 	},
-# 	{
-# 		label: "Weigh Coffee",
-# 	},
-# 	{
-# 		label: "Weigh Coffee",
-# 	},
-# 	{
-# 		label: "Drink",
-# 	},
-# 	{
-# 		label: "Pour",
-# 	},
-# 	{
-# 		label: "Bloom",
-# 	},
-# 	{
-# 		label: "Grind Coffee",
-# 	},
-# 	{
-# 		label: "Weigh Coffee",
-# 	},
-# 	{
-# 		label: "Weigh Coffee",
-# 	},
-# 	{
-# 		label: "Weigh Coffee",
-# 	},
-# 	{
-# 		label: "Weigh Coffee",
-# 	},
-# 	{
-# 		label: "Weigh Coffee",
-# 	},
-# 	{
-# 		label: "Weigh Coffee",
-# 	},
-# 	{
-# 		label: "Weigh Coffee",
-# 	},
+	{
+		label: "Grind Coffee",
+		cat: "Course",
+	},
+	{
+		label: "Bloom",
+		cat: "100 grams",
+	},
+	{
+		label: "1st Pulse",
+		cat: "100 grams",
+	},
+	{
+		label: "Rinse Filter",
+		cat: "100 grams",
+	},
+	{
+		label: "Weigh Coffee",
+		cat: "24 grams",
+	},
+	{
+		label: "Grind Coffee",
+		cat: "Course",
+	},
+	{
+		label: "Bloom",
+		cat: "100 grams",
+	},
+	{
+		label: "1st Pulse",
+		cat: "100 grams",
+	},
 ]
 
 scrollContainer = new Layer
@@ -110,9 +89,19 @@ scrollContainer = new Layer
 listScroll = new ScrollComponent
 	parent: scrollContainer
 	width: screenFrame.width
-	height: screenFrame.height
+	height: scrollContainer.height
 	scrollHorizontal: false
 	backgroundColor: null
+	mouseWheelEnabled: true
+
+listScroll.contentInset =
+	top: 200
+	
+# gradientTop = new Layer
+# 	parent: scrollContainer
+# 	width: scrollContainer.width
+# 	gradient: whiteBlend
+# 	height: 100
 
 for i in [0...listData.length]
 
@@ -122,7 +111,7 @@ for i in [0...listData.length]
 		width: (screenFrame.width-spacer)
 		height: itemHeight
 		x: Align.center(-spacer)
-		y: Align.top(((itemHeight+10)*i))
+		y: Align.top(((itemHeight+gutter)*i))
 		backgroundColor: 'white'
 		borderRadius: 10
 		shadowY: 2
@@ -188,6 +177,16 @@ for i in [0...listData.length]
 		y:Align.center()
 		x: checkContainer.width 
 		
+	itemCatagory = new TextLayer
+		text:listData[i].cat
+		parent: itemWrapper
+		fontSize: 12
+		textTransform: "uppercase"
+		opacity: 0.25
+		color: dark01
+		y:Align.center()
+		x: Align.right(-spacer)
+		
 	# Styling - Strike through line
 	crossLine = new Layer
 		parent: itemWrapper
@@ -225,6 +224,12 @@ for i in [0...listData.length]
 
 
 	# State MGMT
+	itemWrapper.states =
+		start:
+			scale: 1.03
+		end:
+			scale: 1
+			
 	crossLine.states =
 		crossed:
 			width: itemLabel.width
@@ -246,6 +251,9 @@ for i in [0...listData.length]
 	
 	
 	# Animation Options
+	itemWrapper.animationOptions =
+		curve: Spring
+	
 	crossLine.animationOptions =
 		curve: Spring(damping: 0.75)
 		time: 0.5
@@ -261,6 +269,15 @@ for i in [0...listData.length]
 		
 	
 	# Interactions
+	do(itemWrapper) ->
+		itemWrapper.onTapStart ->
+			itemWrapper.stateCycle("start")
+			
+		# Interactions
+	do(itemWrapper) ->
+		itemWrapper.onTapEnd ->
+			itemWrapper.stateCycle("end")
+		
 	do(crossLine) ->
 		itemWrapper.onTap ->
 			crossLine.stateCycle()
