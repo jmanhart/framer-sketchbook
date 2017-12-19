@@ -1,14 +1,18 @@
 bkg = new BackgroundLayer
-	backgroundColor: '#EDEDED'
+	backgroundColor: "#9971E2"
+# 	backgroundColor: 'white'
 	
+
+# Load Raleway from Google Web Fonts 
+roboto = Utils.loadWebFont("Roboto")
 
 
 screenFrame = new Layer
 	width: 375
 	height: Screen.height
-	backgroundColor: 'rgba(255,255,255,0.0)'
+	backgroundColor: null
 	x:Align.center()
-	x:Align.center()
+	y:Align.bottom()
 
 
 itemHeight = 60
@@ -28,64 +32,188 @@ light01 = 'rgba(255,255,255,1)'
 light02 = '#DDDDDD'
 active01 = "#4BDE95"
 
-whiteBlend = new Gradient
-    start: "rgba(255, 255, 255, 0.2)"
-    end: "rgba(255, 255, 255, 1)"
+# whiteBlend = new Gradient
+# 	start: "rgba(255, 255, 255, 0.2)"
+# 	end: "#EDEDED"
 
 # List Data
 listData = [
 	{
-		label: "Rinse Filter",
-		cat: "100 grams",
+		label: "Alabama",
+		cat: "Visited",
 	},
 	{
-		label: "Weigh Coffee",
-		cat: "24 grams",
+		label: "Alaska",
+		cat: "Visited",
 	},
 	{
-		label: "Grind Coffee",
-		cat: "Course",
+		label: "Arizona",
+		cat: "Visited",
 	},
 	{
-		label: "Bloom",
-		cat: "100 grams",
+		label: "Arkansas",
+		cat: "Visited",
 	},
 	{
-		label: "1st Pulse",
-		cat: "100 grams",
+		label: "California",
+		cat: "Visited",
 	},
 	{
-		label: "Rinse Filter",
-		cat: "100 grams",
+		label: "Colorado",
+		cat: "Visited",
 	},
 	{
-		label: "Weigh Coffee",
-		cat: "24 grams",
+		label: "Connecticut",
+		cat: "Visited",
 	},
 	{
-		label: "Grind Coffee",
-		cat: "Course",
+		label: "Delaware",
+		cat: "Visited",
 	},
 	{
-		label: "Bloom",
-		cat: "100 grams",
+		label: "Florida",
+		cat: "Visited",
 	},
 	{
-		label: "1st Pulse",
-		cat: "100 grams",
+		label: "Georgia",
+		cat: "Visited",
+	},
+	{
+		label: "Hawaii",
+		cat: "Visited",
+	},
+	{
+		label: "Illinois",
+		cat: "Visited",
+	},
+	{
+		label: "Indiana",
+		cat: "Visited",
+	},
+	{
+		label: "Iowa",
+		cat: "Visited",
+	},
+	{
+		label: "Kansas",
+		cat: "Visited",
+	},
+	{
+		label: "Kentucky",
+		cat: "Visited",
+	},
+	{
+		label: "Louisiana",
+		cat: "Visited",
+	},
+	{
+		label: "Maine",
+		cat: "Visited",
+	},
+	{
+		label: "Maryland",
+		cat: "Visited",
+	},
+	{
+		label: "Massachusetts",
+		cat: "Visited",
+	},
+	{
+		label: "Michigan",
+		cat: "Visited",
+	},
+	{
+		label: "Minnesota",
+		cat: "Visited",
+	},
+	{
+		label: "Missouri",
+		cat: "Visited",
+	},
+	{
+		label: "Montana",
+		cat: "Visited",
+	},
+	{
+		label: "Nebraska",
+		cat: "Visited",
+	},
+	{
+		label: "Nevada",
+		cat: "Visited",
+	},
+	{
+		label: "New Hampshire",
+		cat: "Visited",
+	},
+	{
+		label: "New Jersey",
+		cat: "Visited",
+	},
+	{
+		label: "New Mexico",
+		cat: "Visited",
+	},
+	{
+		label: "New York",
+		cat: "Visited",
+	},
+	{
+		label: "North Carolina",
+		cat: "Visited",
+	},
+	{
+		label: "North Dakota",
+		cat: "Visited",
+	},
+	{
+		label: "Ohio",
+		cat: "Visited",
+	},
+	{
+		label: "Oklahoma",
+		cat: "Visited",
+	},
+	{
+		label: "Oregon",
+		cat: "Visited",
 	},
 ]
+
+
+
+
+
+
+
+
+
+# Pennsylvania
+# Rhode Island
+# South Carolina
+# South Dakota
+# Tennessee
+# Texas
+# Utah
+# Vermont
+# Virginia
+# Washington
+# West Virginia
+# Wisconsin
+# Wyoming
+
+
+
 
 scrollContainer = new Layer
 	parent: screenFrame
 	width: screenFrame.width
 	x: Align.center()
-	y: Align.center()
-	height: 400
+	y: Align.top()
+	height: screenFrame.height
 	clip: true
 	backgroundColor: null
 	
-
 listScroll = new ScrollComponent
 	parent: scrollContainer
 	width: screenFrame.width
@@ -95,28 +223,26 @@ listScroll = new ScrollComponent
 	mouseWheelEnabled: true
 
 listScroll.contentInset =
-	top: 200
+	top: 250
 	
-# gradientTop = new Layer
-# 	parent: scrollContainer
-# 	width: scrollContainer.width
-# 	gradient: whiteBlend
-# 	height: 100
 
 for i in [0...listData.length]
 
 	# Wrapper - for each list Item
 	itemWrapper = new Layer
 		parent: listScroll.content
-		width: (screenFrame.width-spacer)
+		width: (screenFrame.width-(spacer*2))
 		height: itemHeight
-		x: Align.center(-spacer)
+		x: Align.left(spacer)
 		y: Align.top(((itemHeight+gutter)*i))
 		backgroundColor: 'white'
-		borderRadius: 10
-		shadowY: 2
-		shadowBlur:10
-		shadowColor: 'rgba(0,0,0,0.1)'
+		borderRadius: 8
+		shadow1: 
+			y: 2
+			blur:10
+			color: 'rgba(0,0,0,0.15)'
+		borderWidth: 0
+		borderColor: 'rgba(0,0,0,0.15)'
 		
 	# Container - for the checkmark pieces
 	checkContainer = new Layer
@@ -132,7 +258,7 @@ for i in [0...listData.length]
 		backgroundColor: null
 		borderWidth: checkMarkThickness/1.5
 		borderColor: dark03
-		borderRadius: 4
+		borderRadius: 40
 		x: Align.center()
 		y: Align.center()
 		
@@ -173,6 +299,7 @@ for i in [0...listData.length]
 		text:listData[i].label
 		parent: itemWrapper
 		fontSize: 18
+		fontFamily: roboto
 		color: dark01
 		y:Align.center()
 		x: checkContainer.width 
@@ -182,7 +309,7 @@ for i in [0...listData.length]
 		parent: itemWrapper
 		fontSize: 12
 		textTransform: "uppercase"
-		opacity: 0.25
+		opacity: 0
 		color: dark01
 		y:Align.center()
 		x: Align.right(-spacer)
@@ -198,35 +325,11 @@ for i in [0...listData.length]
 		opacity: 0
 
 
-	# OverFlow - Container
-	overFlowContainer = new Layer
-		height: itemWrapper.height
-		width: (5*3)+(3*2)
-		parent: itemWrapper
-		x:Align.right(-spacer)
-		backgroundColor: null
-
-
-				
-
-
-# 	for i in [0...3]
-# 		overflowDot = new Layer
-# 			parent: overFlowContainer
-# 			size: 5
-# 			borderRadius: 20
-# 			x: Align.center()
-# 			y: Align.top(12+(8*i))
-# 			backgroundColor: dark03
-
-
-
-
 
 	# State MGMT
 	itemWrapper.states =
 		start:
-			scale: 1.03
+			scale: 1.02
 		end:
 			scale: 1
 			
@@ -248,6 +351,11 @@ for i in [0...listData.length]
 	itemLabel.states =
 		crossed:
 			color: dark03
+			
+	itemCatagory.states =
+		crossed:
+			color: dark02
+			opacity: 1
 	
 	
 	# Animation Options
@@ -267,15 +375,18 @@ for i in [0...listData.length]
 	itemLabel.animationOptions =
 		instant: true
 		
+	itemCatagory.animationOptions =
+		instant: true 
+		
 	
 	# Interactions
 	do(itemWrapper) ->
-		itemWrapper.onTapStart ->
+		itemWrapper.onMouseOver ->
 			itemWrapper.stateCycle("start")
 			
 		# Interactions
 	do(itemWrapper) ->
-		itemWrapper.onTapEnd ->
+		itemWrapper.onMouseOut ->
 			itemWrapper.stateCycle("end")
 		
 	do(crossLine) ->
@@ -294,9 +405,18 @@ for i in [0...listData.length]
 		itemWrapper.onTap ->
 			itemLabel.stateCycle()
 			
+	do(itemCatagory) ->
+		itemWrapper.onTap ->
+			itemCatagory.stateCycle()
+			
 	
 	
 	
 	# Layer Layering ha!
 	itemLabel.sendToBack()
+# 	listLabelContainer.bringToFront()
+	
+# listScroll.content.on "change:y", ->
+# # 	Utils.modulate(value, [a, a], [b, b], limit)
+# 	listLabelContainer.shadowY = Utils.modulate(listScroll.scrollY, [20, 40], [0,2], true)
 
