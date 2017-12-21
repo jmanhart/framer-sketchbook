@@ -691,7 +691,7 @@
             "opacity" : 1,
             "contrastEnabled" : 0,
             "locked" : false,
-            "left" : null,
+            "left" : 166,
             "styledText" : {
               "blocks" : [
                 {
@@ -807,7 +807,7 @@
             "saturate" : 100,
             "height" : 28,
             "blendingEnabled" : 0,
-            "top" : null,
+            "top" : 79,
             "constraintsLocked" : false,
             "right" : 103,
             "visible" : true,
@@ -924,7 +924,7 @@
         "grayScaleEnabled" : 0,
         "constraintsLocked" : false,
         "blurType" : "layer",
-        "fillColor" : "#FFFFFF",
+        "fillColor" : "rgba(255, 255, 255, 0)",
         "widthFactor" : null,
         "blendingEnabled" : 0,
         "grayscale" : 0,

@@ -39,7 +39,10 @@ bkg = new BackgroundLayer
 
 songsData = [
 	{
+		artist: "King Gizzard & The Lizard Wizard"
 		album: "Nonagon Infinity"
+		genere: "Psychedelic"
+		release: " June 6 2016"
 		songs: [
 			{
 				name: "Robot Stop"
@@ -81,15 +84,61 @@ songsData = [
 	}
 ]
 
+spacer = 25
+
 songList = new ScrollComponent
 	size: Screen.size
 	scrollHorizontal: false
 
 
+album = new Layer
+	parent: songList.content
+	width: Screen.width
+	height: 180
+
+albumThumbnail = new Layer
+	parent: album
+	size: 115
+	x: Align.left(spacer)
+	y: Align.center()
+
+albumInfo = new Layer
+	parent: album
+	height: 80
+	width: (Screen.width - (albumThumbnail.width + (spacer*2)))
+	x: Align.left(albumThumbnail.width + (spacer*2))
+	y: Align.center()
+	
+albumName = new TextLayer
+	text:  songsData[0].album
+	parent: albumInfo
+	fontSize: 17
+	x: Align.left()
+	textAlign: 'left'
+	
+bandName = new TextLayer
+	text:  songsData[0].artist
+	parent: albumInfo
+	fontSize: 12
+	x: Align.left()
+	y: Align.center()
+	textAlign: 'left'
+	
+bandGenere = new TextLayer
+	text:  songsData[0].genere + songsData[0].release
+	parent: albumInfo
+	fontSize: 12
+	x: Align.left()
+	y: Align.bottom()
+	textAlign: 'left'
+
+	
+
 
 # Import of Design Components
 album_header.y = Align.top()
 album_header.x = Align.center()
+album_header.opacity = 0
 album_header.parent = songList.content
 
 progress_bar.width = 0
@@ -153,6 +202,7 @@ for i in [0...songsData[i].songs.length]
 	do(song) ->
 		song.onTap ->
 			now_playing.stateCycle("a")
+			progressAnimation.start()
 			
 
 now_playing.bringToFront()
