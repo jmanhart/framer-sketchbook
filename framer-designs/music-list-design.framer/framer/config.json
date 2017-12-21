@@ -11,10 +11,10 @@
   "propertyPanelToggleStates" : {
 
   },
-  "projectId" : "38DEAC4E-1210-41D9-BFB9-5EEA37EB90CA",
+  "projectId" : "5DCD4579-1C9F-46CF-A4F5-44BACAEAAFEB",
   "deviceOrientation" : 0,
   "selectedHand" : "",
-  "showBezel" : false,
+  "showBezel" : 0,
   "foldedCodeRanges" : [
 
   ],
