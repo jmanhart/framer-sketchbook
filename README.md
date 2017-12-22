@@ -3,6 +3,8 @@
 ### Framer Sketch Book for learning and testing!
 This is a running project and grab/use whatever you like!
 
+---------
+
 ### framer-basics
 A collection of useful code snippets and resources I have found helpful with Framer. This is forever a work in progress and has each project in here has detail comments
 Topics:
