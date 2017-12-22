@@ -1,7 +1,6 @@
-## Framer Sketch Book
+# 📐 Framer Sketch Book
 
-### Framer Sketch Book for learning and testing!
-This is a running project and grab/use whatever you like!
+Running Sketchbook for Framer interactions and useful basics, tips, and tricks.
 
 ---------
 
