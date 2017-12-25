@@ -5,7 +5,49 @@
     "__class" : "CanvasNode",
     "parentid" : null,
     "children" : [
+      {
+        "__class" : "StarShapeNode",
+        "fillType" : "color",
+        "lineJoin" : "miter",
+        "rotation" : 0,
+        "parentid" : "RRkc9bV4H",
+        "strokeColor" : "#0AF",
+        "locked" : false,
+        "fillEnabled" : true,
+        "exportOptions" : [
 
+        ],
+        "radius" : 0,
+        "spikeCount" : 5,
+        "spikeDepth" : 50,
+        "strokeAlignment" : "center",
+        "strokeWidth" : 1,
+        "name" : null,
+        "aspectRatioLocked" : true,
+        "strokeEnabled" : 0,
+        "lineCap" : "butt",
+        "id" : "kPXaH81dH",
+        "strokeMiterLimit" : 4,
+        "boxShadows" : [
+
+        ],
+        "strokeDashOffset" : 0,
+        "fillGradient" : {
+          "end" : "rgba(0,0,0,0)",
+          "alpha" : 1,
+          "angle" : 0,
+          "__class" : "LinearGradient",
+          "start" : "black"
+        },
+        "opacity" : 1,
+        "height" : 14,
+        "x" : 0,
+        "width" : 14,
+        "strokeDashArray" : "0",
+        "fillColor" : "#CCC",
+        "y" : 0,
+        "visible" : true
+      }
     ]
   }
 }
