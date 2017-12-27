@@ -13,6 +13,8 @@ text_xsmall = 10
 fpo_color = "rgba(0,0,0,0.1)"
 
 # Classes
+
+# Card Wrapper Class
 class cardWrapper extends Layer
 	constructor: (options) ->
 		super _.defaults options,
@@ -25,14 +27,7 @@ class cardWrapper extends Layer
 			clip: true
 			opacity: 0.5
 			
-class starWrapper extends Layer
-	constructor: (options) ->
-		super _.defaults options,
-			height: 40
-			width: 40
-			svg: "<svg><path d='M 7 0 L 9.057 4.168 L 13.657 4.837 L 10.329 8.082 L 11.114 12.663 L 7 10.5 L 2.886 12.663 L 3.671 8.082 L 0.343 4.837 L 4.943 4.168 Z' fill="#CCC"/>"
-
-
+# Type Classes
 class title01 extends TextLayer
 	constructor: (options) ->
 		super _.defaults options,
@@ -64,37 +59,29 @@ class body01 extends TextLayer
 # Data
 cardData = [
 	{
-		title01: "Merry Holidays"	
+		title01: "Card Title"	
 		title02: "This is a sub title"
 		body01:"Lorem ipsum dolor amet franzen narwhal 3 wolf moon chia kale chips pickled. Cronut shoreditch twee, mlkshk food truck kale "
 	},
 ]
 	
-	
-# shape = new SVGLayer
-# 	svg: "<svg><path d='M 7 0 L 9.057 4.168 L 13.657 4.837 L 10.329 8.082 L 11.114 12.663 L 7 10.5 L 2.886 12.663 L 3.671 8.082 L 0.343 4.837 L 4.943 4.168 Z' fill="#CCC"/>"
-
-# <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"><path d="M 7 0 L 9.057 4.168 L 13.657 4.837 L 10.329 8.082 L 11.114 12.663 L 7 10.5 L 2.886 12.663 L 3.671 8.082 L 0.343 4.837 L 4.943 4.168 Z" fill="#CCC"/>
-
-# shape = new SVGLayer
-# 	svg: "<svg><path d='M0 0 H 200 V 200 H 0 L 0 0' />"
-
-
-
+# Component - card wrapper element and class
 card = new cardWrapper
 	y: Align.center()
 	x: Align.center()
 
-#Var - for setting all children widths based on parent
+# Var - for setting all children widths based on parent
 cardContentWidth = card.width - (spacer*2)
 
+# Component - Title One tied to Data
 title01 = new title01
 	parent: card
 	text: cardData[0].title01
 	width: cardContentWidth 
 	y: Align.top(spacer)
 	x: Align.left(spacer)
-	
+
+# Component - Title Two tied to Data
 title02 = new title02
 	parent: card
 	text: cardData[0].title02
@@ -102,6 +89,7 @@ title02 = new title02
 	y: title01.y + title01.height + spacer
 	x: Align.left(spacer)
 	
+# Component - Title One tied to Data	
 body01 = new body01
 	parent: card
 	text: cardData[0].body01
@@ -110,5 +98,3 @@ body01 = new body01
 	x: Align.left(spacer)
 	
 
-
-dude = new starWrapper
