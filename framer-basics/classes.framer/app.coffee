@@ -10,7 +10,8 @@ text_reg = 16
 text_small = 12
 text_xsmall = 10
 
-fpo_color = "rgba(0,0,0,0.1)"
+# FPO Color Killer
+fpo_color = "rgba(0,0,0,0.05)"
 
 # Classes
 

@@ -8,7 +8,7 @@ Running Sketchbook for Framer interactions and useful basics, tips, and tricks.
 A collection of useful code snippets and resources I have found helpful with Framer. This is forever a work in progress and has each project in here has detail comments
 Topics:
 - Loops
-- Classes **[WIP]**
+- Classes
 - Conditonals **[WIP]**
 - Functions **[WIP]**
 - Using Modules **[Coming Soon...]**
