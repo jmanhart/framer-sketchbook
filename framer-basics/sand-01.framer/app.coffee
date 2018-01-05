@@ -1,22 +1,36 @@
 # Set background
 Canvas.backgroundColor = "#000"
 
+buttonTop = new Layer
+	size: 60
+	x: Align.center()
+	y: Align.center(-50)
 
-for button in [buttonRight, buttonLeft]
+buttonBottom = new Layer
+	size: 60
+	x: Align.center()
+	y: Align.center(50)
+
+
+for button in [buttonTop, buttonBottom]
 	button.states =
 		active: 
-			opactiy: 1
-			scale: 1.1
-			backgroundColor: "#22AA99"
+			scale: 1.4
+			rotation: 0
 		inactive:
-			opacity: 0.5
 			scale: 1
+			rotation: 0
 			
-buttonRight.onTap ->
-	buttonRight.stateCycle("active")
-	buttonLeft.stateCycle("inactive")
+	button.animationOptions =
+		curve: Spring
+	
+buttonTop.onTap ->
+	buttonTop.stateCycle("active")
+	buttonBottom.stateCycle("inactive")
 	
 	
-buttonLeft.onTap ->
-	buttonLeft.stateCycle("active")
-	buttonRight.stateCycle("inactive")
+buttonBottom.onTap ->
+	buttonBottom.stateCycle("active")
+	buttonTop.stateCycle("inactive")
+	
+
