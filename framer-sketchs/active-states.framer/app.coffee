@@ -1,10 +1,10 @@
 
 
-# rows = []
+rows = []
 # 
 # dude = rows
 
-for i in [0...2]
+for i in [0...3]
 	row = new Layer
 		name: 'row ' + i
 		y: i * 50
@@ -12,6 +12,7 @@ for i in [0...2]
 		width: Screen.width
 	
 	row.rightButton = new Layer
+		name: 'Right Button'
 		parent: row
 		height: row.height
 		width: 100
@@ -19,6 +20,7 @@ for i in [0...2]
 		backgroundColor: "red"
 		
 	row.leftButton = new Layer
+		name: 'Left Button'
 		parent: row
 		height: row.height
 		width: 100
@@ -27,33 +29,62 @@ for i in [0...2]
 	row.states =
 		active:
 			x: -100
-			backgroundColor: 'green'
-		inactive:
-			x: 0
-			backgroundColor: 'blue'
-			
-			
-			
-		pink:
-			backgroundColor: 'pink'
-			
-# 	row.active = false
+						
+	rows.push row
+	
+	row.active = false
 	
 	do(row)->
-# 		row.leftButton.onTap ->
-# 			row.stateCycle()
-		
 		row.leftButton.onTap -> 
 			row.active = true
-			rowActive(@stateCycle)
-
-
-	rowActive = (stateCycle) ->
-		stateCycle = 
+			stateToggle()
+			
+	do(row)->
+		row.rightButton.onTap -> 
+			row.active = false
+			stateToggle()
+		
+					
+	stateToggle = () ->
+		for row in rows
 			if row.active is true 
-				row.stateCycle("active")
-			else 
-				row.stateCycle("inactive")
+				row.stateCycle()
+			else
+				row.active = false
+				row.stateCycle("default")
+					
+			
+			
+			
+# 	stateToggle = () ->
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+# 	do(row)->
+# 		row.leftButton.onTap -> 
+# 			if row.active is true 
+# 				row.stateCycle("active")
+# 			if row.active is false
+# 				row.stateCycle("inactive")
+
+
+
+# 	isRowActive = () ->
+# 		if row.active is true 
+# 			row.stateCycle("active")
+# 		else 
+# 			row.stateCycle("active")
 
 
 
