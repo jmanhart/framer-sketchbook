@@ -36,22 +36,39 @@ for i in [0...3]
 	
 	do(row)->
 		row.leftButton.onTap -> 
-			row.active = true
+			row.active = true	
 			stateToggle()
-			
-	do(row)->
-		row.rightButton.onTap -> 
-			row.active = false
-			stateToggle()
-		
-					
+	
 	stateToggle = () ->
 		for row in rows
-			if row.active is true 
-				row.stateCycle()
+			if row.active == true 
+				row.stateCycle("active")
 			else
-				row.active = false
+				row.active == false
 				row.stateCycle("default")
+	
+# 	do(row)->
+# 		row.rightButton.onTap -> 
+# 			row.active = false
+# 			stateToggle()
+
+# score = 60
+# # 
+# message = switch 
+#    when score>=75 then "Congrats your grade is A"
+#    when score>=60 then "Your grade is B"
+#    when score>=50 then "Your grade is C"
+#    when score>=35 then "Your grade is D"
+#    else "Your grade is F and you are failed in the exam"
+# print message
+
+# 	stateToggle = switch
+# 		when row.active = true 
+# 			then row.stateCycle()
+# 		else
+# 			row.stateCycle("default")
+	
+				
 					
 			
 			
