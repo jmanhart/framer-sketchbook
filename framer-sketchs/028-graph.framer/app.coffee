@@ -18,7 +18,7 @@ xPadding = 14
 
 
 # Define horizontal axis
-for x in [0..data.length]
+for x in [0..31]
 	xAmounts.push(x)
 	xPoints = Utils.modulate(x, [0, 31], [0, graphBox.width + xPadding])
 	xAxis.push(xPoints)

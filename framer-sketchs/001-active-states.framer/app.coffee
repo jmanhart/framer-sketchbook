@@ -29,23 +29,52 @@ for i in [0...3]
 	row.states =
 		active:
 			x: -100
+		inactive:
+			x: 0
 						
 	rows.push row
 	
 	row.active = false
 	
 	do(row)->
-		row.leftButton.onTap -> 
-			row.active = true	
-			stateToggle()
+		row.leftButton.onTap ->
+			row.active = true 	
+			
+			dude = only one active
+					
+			for row in rows
+				if row.active == true
+					row.stateCycle("active")
+					
+				if row.active == false 
+					row.stateCycle("inactive")
+			
 	
-	stateToggle = () ->
-		for row in rows
-			if row.active == true 
-				row.stateCycle("active")
-			else
-				row.active == false
-				row.stateCycle("default")
+	
+	
+	
+	
+# 	stateToggle = () ->
+# 		
+# 		tapped = 3
+# 		
+# 		for row in rows
+# 			if row.active == true and tapped
+# 				row.stateCycle("active")
+# 				
+# 			if row.active == false 
+# 				row.stateCycle("inactive")
+		
+		
+		
+		
+		
+		
+# 			if row.active == true 
+# 				row.stateCycle("active")
+# 				
+# 			if row.active == false 
+# 				row.stateCycle("default")
 	
 # 	do(row)->
 # 		row.rightButton.onTap -> 
@@ -68,7 +97,20 @@ for i in [0...3]
 # 		else
 # 			row.stateCycle("default")
 	
-				
+# 		row.active = false
+# 	
+# 	do(row)->
+# 		row.leftButton.onTap -> 
+# 			row.active = true	
+# 			stateToggle()
+# 	
+# 	stateToggle = () ->
+# 		for row in rows
+# 			if row.active == true 
+# 				row.stateCycle("active")
+# 				
+# 			if row.active == false 
+# 				row.stateCycle("default")			
 					
 			
 			
