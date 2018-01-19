@@ -1,5 +1,5 @@
 bkg = new BackgroundLayer
-	backgroundColor: "#121212"
+	backgroundColor: "#E8E8E8"
 
 
 spacer = 30
@@ -15,16 +15,19 @@ workoutData = [
 ]
 
 
-topNav = new Layer
-	width: Screen.width
-	height: 64
+# topNav = new Layer
+# 	width: Screen.width
+# 	height: 64
 
 scroll = new ScrollComponent
-	y: topNav.height
+	y:0
 	width: Screen.width
-	height: Screen.height - topNav.height
+	height: Screen.height
 	backgroundColor: null
 	scrollHorizontal: false
+	
+scroll.contentInset =
+	top: 0
 
 for i in [0...5]
 
@@ -37,7 +40,7 @@ for i in [0...5]
 		y: listItemHeight * i
 		width: Screen.width
 		height: listItemHeight
-		backgroundColor: 'rgba(0,0,0,1)'
+		backgroundColor: null
 		scrollHorizontal: false
 		scrollVertical: false
 	listItemScroll.states =
@@ -55,7 +58,7 @@ for i in [0...5]
 		y: Align.top(spacer/2)
 		width: listItemHeight - spacer
 		height: listItemHeight - spacer
-		backgroundColor: 'white'
+# 		backgroundColor: 'white'
 		borderRadius: 3
 	listPhoto.states = 
 		active:
@@ -64,15 +67,20 @@ for i in [0...5]
 			width: Screen.width
 			height: listPhotoHeight
 			borderRadius: 0
-		
+			backgroundColor: 'yellow'
+	
+	listPhoto.animationOptions =
+		curve: Spring
+	
 	# List Labels - Main Label
-	diffLabel = new TextLayer
+	diffLabel = new Layer
 		parent: listItemScroll
 # 		text: workoutData[i].difficulty
-		text:"Beginner"
-		x: Align.left(80)
-		y: Align.center(-20)
-		fontSize: 12
+# 		text:"Beginner"
+		x: Align.left(95)
+		y: Align.center(-10)
+		height: 12
+		width: Utils.randomNumber(150, 170)
 		textAlign: "left"
 	diffLabel.states =
 		active:
@@ -81,14 +89,15 @@ for i in [0...5]
 			opacity: 0
 					
 	# List Labels - Main Label
-	listLabel = new TextLayer
+	listLabel = new Layer
 		parent: listItemScroll
 # 		text: workoutData[i].title
 		text:"Beginner Home Workout"
-		x: Align.left(80)
-		y: Align.center()
-		fontSize: 17
-		textAlign: "left"
+		x: Align.left(95)
+		y: Align.center(8)
+		height: 10
+		width: Utils.randomNumber(100, 110)
+
 	listLabel.states =
 		active:
 			x: Align.left(80)
@@ -107,19 +116,19 @@ for i in [0...5]
 		y: Align.top(listItemHeight)
 		height: 0
 		width: Screen.width
-		backgroundColor: 'rgba(0,0,255,0.5)'
+		backgroundColor: 'rgba(0,0,255,1)'
 	listItemContent.states =
 		active:
 			y: Align.top(listPhotoHeight)
 			height: 1200
 	
 	
-	heroLabel = new TextLayer
-		text:"Beginner Home Workout"
+	heroLabel = new Layer
 		parent: listItemContent
 		y: Align.top(listItemHeight)
 		x: Align.center()
-		fontSize: 18
+		height: 18
+		width: 100
 	heroLabel.states =
 		active:
 			y: -150
@@ -129,12 +138,12 @@ for i in [0...5]
 			y: Align.top(listItemHeight)
 			
 	
-	heroSubLabel = new TextLayer
-		text:"Beginner"
+	heroSubLabel = new Layer
 		parent: listItemContent
 		y: Align.top(listItemHeight+100)
 		x: Align.center()
-		fontSize: 14
+		height: 14
+		width: 60
 	heroSubLabel.states =
 		active:
 			y: -130
@@ -150,44 +159,44 @@ for i in [0...5]
 		listPhoto.onTap ->
 			listItemScroll.stateCycle()
 			listItemScroll.bringToFront()
-		topNav.onTap ->
-			listItemScroll.stateCycle("default")
+# 		topNav.onTap ->
+# 			listItemScroll.stateCycle("default")
 
 	do(listPhoto) ->
 		listPhoto.onTap ->
 			listPhoto.stateCycle()
-		topNav.onTap ->
-			listPhoto.stateCycle("default")
+# 		topNav.onTap ->
+# 			listPhoto.stateCycle("default")
 			
 	do(diffLabel) ->
 		listPhoto.onTap ->
 			diffLabel.stateCycle()
-		topNav.onTap ->
-			diffLabel.stateCycle("default")
+# 		topNav.onTap ->
+# 			diffLabel.stateCycle("default")
 			
 	do(listLabel) ->
 		listPhoto.onTap ->
 			listLabel.stateCycle()
-		topNav.onTap ->
-			listLabel.stateCycle("default")
+# 		topNav.onTap ->
+# 			listLabel.stateCycle("default")
 			
 	do(listItemContent) ->
 		listPhoto.onTap ->
 			listItemContent.stateCycle()
-		topNav.onTap ->
-			listItemContent.stateCycle("default")
+# 		topNav.onTap ->
+# 			listItemContent.stateCycle("default")
 			
 	do(heroLabel) ->
 		listPhoto.onTap ->
 			heroLabel.stateCycle("active", "inactive")
-		topNav.onTap ->
-			heroLabel.stateCycle("default")
+# 		topNav.onTap ->
+# 			heroLabel.stateCycle("default")
 			
 	do(heroSubLabel) ->
 		listPhoto.onTap ->
 			heroSubLabel.stateCycle("active", "inactive")
-		topNav.onTap ->
-			heroSubLabel.stateCycle("default")
+# 		topNav.onTap ->
+# 			heroSubLabel.stateCycle("default")
 			
 		
 			
