@@ -20,17 +20,27 @@ cardCopy = new Layer
 	height: 110	
 	backgroundColor: 'white'
 
+cardIcon = new Layer
+	parent: cardCopy
+	size: 45
+	x: Align.left(25)
+	y: Align.center(0)
+
 cardCopyTile = new Layer
 	parent: cardCopy
-	height: 22
-	x: Align.left(70)
+	height: 18
+	x: Align.left(100)
 	y: Align.top(30)
 	
 cardCopySubTitle = new Layer
 	parent: cardCopy
-	height: 16
-	x: Align.left(70)
-	y: cardCopyTile.y + 35
+	height: 14
+	width: 100
+	x: Align.left(100)
+	y: cardCopyTile.y + 30
+
+
+
 
 cardImage = new Layer
 	parent: cardContainer
@@ -39,15 +49,25 @@ cardImage = new Layer
 	width: cardContainer.width
 	height: cardContainer.height - cardCopy.height
 
+
+
+
+
+
 cardContainer.states =
 	one:
 		width: Screen.width
 		height: Screen.height
 		y: 0
 		x: 0
+		
+cardImage.states =
+	one:
+		width: Screen.width
 
 # cardContainer.animationOptions =
 # 	curve: Spring
 # 	
 cardContainer.onTap ->
 	cardContainer.stateCycle()
+	cardImage.stateCycle()
