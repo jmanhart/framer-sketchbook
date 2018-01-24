@@ -1,7 +1,7 @@
 bkgLayer = new BackgroundLayer
 	backgroundColor: '#E8E8E8'
 
-containerWidth = Screen.width/1.20
+containerWidth = Screen.width/1.40
 spacer = 25
 
 cards = []
@@ -14,9 +14,10 @@ parentCard = new Layer
 	height: Screen.height - 300
 	borderRadius: 8
 	backgroundColor: 'white'
-	shadowY: 2
-	shadowBlur: 5
-	shadowSpread: 2
+	shadowY: 1
+	shadowColor: "rgba(0,0,0,0.15)"
+	shadowBlur: 8
+	shadowSpread: 4
 
 sideScroll = new ScrollComponent
 	parent: parentCard
@@ -45,7 +46,13 @@ for i in [0..5]
 		height: profile.height - spacer
 		borderRadius: 8
 		backgroundColor: 'white'
-		shadowY: 2
-		shadowBlur: 5
-		shadowSpread: 2
-		
+		shadowY: 1
+		shadowColor: "rgba(0,0,0,0.15)"
+		shadowBlur: 8
+		shadowSpread: 4
+	
+divider = new Layer
+	parent: parentCard
+	width: 	parentCard.width
+	height: 1
+	y: Align.bottom(-(sideScroll.height + spacer))
