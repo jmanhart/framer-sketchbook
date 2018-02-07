@@ -7,7 +7,7 @@ if (window.Framer) {window.Framer.Defaults.DeviceView = {"deviceScale":"fit","se
 }
 if (window.Framer) {window.Framer.Defaults.DeviceComponent = {"deviceScale":"fit","selectedHand":"","deviceType":"google-pixel-2-just-black","contentScale":1,"hideBezel":true,"orientation":0};
 }
-window.FramerStudioInfo = {"deviceImagesUrl":"\/_server\/resources\/DeviceImages","documentTitle":"page-01.framer"};
+window.FramerStudioInfo = {"deviceImagesUrl":"\/_server\/resources\/DeviceImages","documentTitle":"025-page-I.framer"};
 
 Framer.Device = new Framer.DeviceView();
 Framer.Device.setupContext();

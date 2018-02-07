@@ -20,7 +20,32 @@ cardContainer.contentInset =
 	top: 150
 	bottom: 100
 
-for i in [0...4]
+
+cardData = [
+	{
+		title: "hello 01"
+		innerCards: [
+			{
+				innerTitle:"Inner 01",
+			},
+			{
+				innerTitle:"Inner 02",
+			},
+			{
+				innerTitle:"Inner 03",
+			},
+		]
+	},
+	{
+		title: "hello 02"	
+	},
+	{
+		title: "hello 03"	
+	},
+
+]
+
+for i in [0...cardData.length]
 	parentCard = new Layer
 		parent: cardContainer.content
 		x: Align.center
@@ -34,6 +59,13 @@ for i in [0...4]
 		shadowBlur: 8
 		shadowSpread: 4
 	
+	parentCardLabel = new TextLayer
+		parent: parentCard
+		x: Align.center()
+		y: Align.top(40)
+		fontSize: 24
+		text: cardData[i].title
+	
 	sideScroll = new ScrollComponent
 		parent: parentCard
 		height: 200
@@ -46,12 +78,12 @@ for i in [0...4]
 		left: (cardContainer.width - (cardWidth + (spacer/2))) 
 		right: (cardContainer.width - (cardWidth + (spacer/2)))
 		
-	for i in [0...3]
+	for e in [0...cardData[e].innerCards.length]
 		profile = new Layer
 			parent: sideScroll.content
 			width: containerWidth/modA
 			height: sideScroll.height
-			x: containerWidth/modA * i
+			x: containerWidth/modA * e
 			backgroundColor: 'rgba(0,0,0,0.0)'
 		
 		card = new Layer
@@ -66,6 +98,15 @@ for i in [0...4]
 			shadowColor: "rgba(0,0,0,0.15)"
 			shadowBlur: 8
 			shadowSpread: 4
+		
+		label = new TextLayer
+# 			text: cardData[e].innerCards[e].innerTitle
+			parent: card
+			fontSize: 22
+			x: Align.center()
+			y: Align.center()
+		
+		
 		
 	divider = new Layer
 		parent: parentCard
