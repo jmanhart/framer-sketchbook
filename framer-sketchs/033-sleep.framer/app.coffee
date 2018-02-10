@@ -10,8 +10,8 @@ toggle = new Layer
 
 
 graphContainer = new Layer
-	width: Screen.width - (spacer*2)
-	height: 350
+	width: Screen.width - (spacer*4)
+	height: 200
 	x: Align.center()
 	y: Align.bottom(-spacer*2)
 	clip: true
@@ -51,11 +51,12 @@ sleepLevelsDate = [
 # 	backgroundColor: '#793EAC'
 # 	
 
-lightEvent = 20
+lightEvent = 8
 remEvent = 10
-awakeEvents = 1
+awakeEvents = 3
 
-
+toggledGraphHeight = 0.9
+toggledGraphY = 0.1
 
 deepLevels = new Layer
 	parent: graphContainer
@@ -67,7 +68,7 @@ deepLevels = new Layer
 deepLevels.states =
 	toggled:
 		height: graphContainer.height*0.15
-		y: graphContainer.height*0.85
+		y: graphContainer.height*toggledGraphHeight
 
 do(deepLevels) ->
 	toggle.onTap ->
@@ -78,7 +79,7 @@ do(deepLevels) ->
 for i in [0...lightEvent]
 	lightLevels = new Layer
 		parent: graphContainer
-		width: Utils.randomNumber(0, 30)
+		width: Utils.randomNumber(20, 40)
 		height: graphContainer.height*0.50
 		y: Align.bottom
 		x: Utils.randomNumber(0, graphContainer.width)
@@ -86,8 +87,8 @@ for i in [0...lightEvent]
 		
 	lightLevels.states =
 		toggled:
-			height: graphContainer.height*0.15
-			y: graphContainer.height*0.85
+			height: graphContainer.height*toggledGraphY
+			y: graphContainer.height*toggledGraphHeight
 	
 	do(lightLevels) ->
 		toggle.onTap ->
@@ -106,8 +107,8 @@ for i in [0...awakeEvents]
 		
 	remLevels.states =
 		toggled:
-			height: graphContainer.height*0.15
-			y: graphContainer.height*0.85
+			height: graphContainer.height*toggledGraphY
+			y: graphContainer.height*toggledGraphHeight
 	
 	do(remLevels) ->
 		toggle.onTap ->
@@ -121,13 +122,15 @@ for i in [0...awakeEvents]
 		width: Utils.randomNumber(0, 3)
 		height: graphContainer.height
 		y: Align.bottom
-		x: Utils.randomNumber(0, graphContainer.width)
+# 		x: Utils.randomNumber(0, graphContainer.width)
+# 		x: Utils.randomNumber((50>0), (100>50))
+		x: Utils.randomNumber(10,100)
 		backgroundColor: '#DF6ECD'
 		
 	awakeLevels.states =
 		toggled:
-			height: graphContainer.height*0.15
-			y: graphContainer.height*0.85
+			height: graphContainer.height*toggledGraphY
+			y: graphContainer.height*toggledGraphHeight
 	
 	do(awakeLevels) ->
 		toggle.onTap ->
