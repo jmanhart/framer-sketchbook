@@ -120,43 +120,52 @@ for i in [0...sleepEvents[0].awake.numberOf]
 dude = 200
 
 
-roger = 
-	"""
-		0,#{graphContainer.height - spacer}
-		40,#{graphContainer.height - spacer} 
-		70,#{graphContainer.height - spacer}
-		#{graphContainer.width}, #{graphContainer.height - spacer}
-	"""
+yBase = 180
 
-poop = new SVGLayer
+# yAxis = [ yBase,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,yBase]
+# xAxis = [ 0,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,275]
+
+yAxis = [ yBase,yBase]
+xAxis = [ 0,275]
+
+yAxisN = [ yBase,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,yBase]
+xAxisN = [ 0,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,275]
+
+yBase = 180
+
+line = new SVGLayer
 	width: graphContainer.width
 	parent: graphContainer
-	svg: 
-		"""
+	svg: """
 			<svg viewBox="0 #{-graphContainer.height} #{graphContainer.width} #{graphContainer}" class="chart">
-				<polyline
-					fill="rgba(255, 255, 255, 0.15)"
-					stroke="white"
-					stroke-width="2"
-					stroke-linejoin="round"
-					width="100"
-					points="#{roger}"
-					"/>
+			<polyline
+				fill="rgba(0, 100, 255, 0.5)"
+				stroke="white"
+				stroke-width="2"
+				stroke-linejoin="round"
+				"/>
 			</svg>
 		"""
-	fill: "#0AF"
+ 
 
 
-path = poop.elements.shape
-# 
-# path.strokeWidth = 10
-# path.stroke = "#0AF"
+points = _.zip(xAxis, yAxis).toString()
+polyline = line.svg.children[0]
+polyline.setAttribute("points", points)
 
-# line.states =
-# 	toggled:
-# 		stroke: 'green'
-# 
-# toggle.onTap ->
-# 	line.stateCycle()
-	
 
+path = line.elements.shape
+
+toggle.onTap ->
+# 	points = _.zip(xAxisN, yAxisN).toString()
+# 	polyline.setAttribute("points", points)
+	line.animate
+		point: 10
+		rotation: 10
+
+
+# 				points=
+# 					"
+# 					0,#{yBase} 
+# 					275,#{yBase} 
+# 					"
