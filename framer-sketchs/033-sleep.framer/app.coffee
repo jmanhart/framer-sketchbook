@@ -143,6 +143,7 @@ line = new SVGLayer
 				stroke="white"
 				stroke-width="2"
 				stroke-linejoin="round"
+				
 				"/>
 			</svg>
 		"""
@@ -156,12 +157,12 @@ polyline.setAttribute("points", points)
 
 path = line.elements.shape
 
-toggle.onTap ->
+# toggle.onTap ->
 # 	points = _.zip(xAxisN, yAxisN).toString()
 # 	polyline.setAttribute("points", points)
-	line.animate
-		point: 10
-		rotation: 10
+# 	polyline.animate
+# 		point: 10
+# 		rotation: 10
 
 
 # 				points=
