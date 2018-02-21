@@ -6,13 +6,11 @@ graphContainer = new Layer
 	x: Align.center()
 	y: Align.bottom(-spacer*2)
 	clip: true
-	backgroundColor: 'rgba(255,255,255,0.15)'
+	backgroundColor: 'rgba(255,255,255,0.05)'
 	
 
 toggledGraphHeight = 0.9
 toggledGraphY = 0.1
-
-
 
 sleepEvents = [
 	light:
@@ -39,10 +37,27 @@ sleepEvents = [
 
 
 toggle = new Layer
-	width: 100
-	height: 100
-	y: Align.top(spacer)
-	x: Align.center()
+	width: 108
+	height: 15
+	x: 217
+	y: 403
+	backgroundColor: null
+
+toggleIcon = new Layer
+	size: 11
+	backgroundColor: 'white'
+	parent: toggle
+	y: Align.center()
+	x: Align.left(5)
+	
+	
+toggleLabel = new TextLayer
+	text: "Show Movement"
+	parent: toggle
+	fontSize: 11
+	y: Align.center()
+	x: Align.left(20)
+
 
 
 # Deep Build
@@ -117,45 +132,69 @@ for i in [0...sleepEvents[0].awake.numberOf]
 		toggle.onTap ->
 			awakeLevels.stateCycle()
 
-dude = 200
 
 
-yBase = 180
+
+
+# polyOff.backgroundColor = 'yellow'
+# polyOff.parent = graphContainer
+# polyOff.y = Align.bottom(-spacer*2)
+# polyOff.x = Align.center()
+# 
+# 
+# 
+# toggle.onTap ->
+	
+
+
+
+
+
+
+
+
+
+
+
+# dude = 200
+# 
+# 
+# yBase = 180
 
 # yAxis = [ yBase,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,yBase]
 # xAxis = [ 0,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,275]
 
-yAxis = [ yBase,yBase]
-xAxis = [ 0,275]
+# yAxis = [ yBase,yBase]
+# xAxis = [ 0,275]
+# 
+# yAxisN = [ yBase,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,yBase]
+# xAxisN = [ 0,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,275]
+# 
+# yBase = 180
 
-yAxisN = [ yBase,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,yBase]
-xAxisN = [ 0,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,275]
-
-yBase = 180
-
-line = new SVGLayer
-	width: graphContainer.width
-	parent: graphContainer
-	svg: """
-			<svg viewBox="0 #{-graphContainer.height} #{graphContainer.width} #{graphContainer}" class="chart">
-			<polyline
-				fill="rgba(0, 100, 255, 0.5)"
-				stroke="white"
-				stroke-width="2"
-				stroke-linejoin="round"
-				
-				"/>
-			</svg>
-		"""
+# line = new SVGLayer
+# 	width: graphContainer.width
+# 	parent: graphContainer
+# 	svg: """
+# 			<svg viewBox="0 #{-graphContainer.height} #{graphContainer.width} #{graphContainer}" class="chart">
+# 			<polyline
+# 				fill="rgba(0, 100, 255, 0.5)"
+# 				stroke="white"
+# 				stroke-width="2"
+# 				stroke-linejoin="round"
+# 				
+# 				"/>
+# 			</svg>
+# 		"""
  
 
 
-points = _.zip(xAxis, yAxis).toString()
-polyline = line.svg.children[0]
-polyline.setAttribute("points", points)
+# points = _.zip(xAxis, yAxis).toString()
+# polyline = line.svg.children[0]
+# polyline.setAttribute("points", points)
 
 
-path = line.elements.shape
+# path = line.elements.shape
 
 # toggle.onTap ->
 # 	points = _.zip(xAxisN, yAxisN).toString()
