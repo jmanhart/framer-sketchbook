@@ -1,3 +1,6 @@
+# bkg = new BackgroundLayer
+# 	backgroundColor: 'green'
+
 animationBox.y = Align.center(75)
 animationBox.x = Align.center()
 # 
@@ -10,9 +13,9 @@ animationBox.x = Align.center()
 # 		curve: Spring(tension: 250, friction: 25)
 
 
-rotationAngle = 180
+rotationAngle = 360
 rotationTime = 
-rotationRepeat = 0
+rotationRepeat = 5
 
 animationTime = [
 	2.50,
