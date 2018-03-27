@@ -12,45 +12,57 @@ cardWrapper = new Layer
 	y: Align.center()
 	x: Align.center()
 	width: Screen.width - spacer
-	height: displayPhotoDim * 3
+	height: displayPhotoDim * 2.5
 	backgroundColor: 'white'
 	borderRadius: 3
-	borderWidth: 1
+	borderWidth: displayPhotoIndicatorWidth
 	borderColor: '#DDDFE2'
 	
 cardDisplayPhotoIndicator = new Layer
 	parent: cardWrapper
-	height: displayPhotoDim * 1.25
-	width: displayPhotoDim * 1.25
+	height: displayPhotoDim
+	width: displayPhotoDim
 	borderRadius: displayPhotoDim
 	y: Align.center()
-	x: Align.left(spacer)
+	x: Align.left(spacer*1.25)
 	backgroundColor: null
 	borderWidth: displayPhotoIndicatorWidth
 	borderColor: displayPhotoIndicatorBackgroundColor
 	
 cardDisplayPhoto = new Layer
-	parent: cardDisplayPhotoIndicator
+	parent: cardWrapper
 	height: displayPhotoDim
 	width: displayPhotoDim
 	borderRadius: displayPhotoDim
 	# Must offset border width
-	y: Align.center(displayPhotoIndicatorWidth)
-	x: Align.center(displayPhotoIndicatorWidth)
+	y: Align.center()
+	x: Align.left(spacer*1.25)
 	image: 'images/brad.jpg'
 	
 	
-	
-mouseOverAnimation = new Animation cardDisplayPhotoIndicator,
-	scale: 1.2
+# Setting up the animation blocks
+fadeIn = new Animation cardDisplayPhotoIndicator,
+	scale: 1.25
+	opacity: 1
+	options:
+		curve: Bezier.easeInOut
+		time: 1
 
-mouseOutAnimation = new Animation cardDisplayPhotoIndicator,
-	scale: 1	
+fadeDestroy = new Animation cardDisplayPhotoIndicator,
+	opacity: 0
 
-cardWrapper.onMouseOver ->
-	print "Hello"
-	mouseOverAnimation.start()
+# On Mouse Enter 
+cardWrapper.onMouseEnter ->
+	fadeIn.start()
+		
+fadeIn.on Events.AnimationEnd, ->
+	fadeDestroy.start()
 	
+fadeDestroy.on Events.AnimationEnd, ->
+	fadeIn.reset()
+	fadeIn.restart()
+	
+# On Mouse Out Animation Block
 cardWrapper.onMouseOut ->
-	print "Good-Bye"
-	mouseOutAnimation.start()
+	fadeIn.reset()
+	fadeIn.stop()
