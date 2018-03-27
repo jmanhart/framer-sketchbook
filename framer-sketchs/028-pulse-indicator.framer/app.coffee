@@ -12,11 +12,15 @@ cardWrapper = new Layer
 	y: Align.center()
 	x: Align.center()
 	width: Screen.width - spacer
-	height: displayPhotoDim * 2.5
+	height: displayPhotoDim * 2.25
 	backgroundColor: 'white'
 	borderRadius: 3
 	borderWidth: displayPhotoIndicatorWidth
 	borderColor: '#DDDFE2'
+	
+cardWrapper.states =
+	onMouseEnter:
+		borderColor: displayPhotoIndicatorBackgroundColor
 	
 cardDisplayPhotoIndicator = new Layer
 	parent: cardWrapper
@@ -38,11 +42,19 @@ cardDisplayPhoto = new Layer
 	y: Align.center()
 	x: Align.left(spacer*1.25)
 	image: 'images/brad.jpg'
+
+cardLabel = new TextLayer
+	parent: cardWrapper
+	text: "Jasen Pearson"
+	fontSize: 20
+	x: Align.left(cardDisplayPhoto.y + (spacer*3))
+	y: Align.center()
 	
+
 	
 # Setting up the animation blocks
 fadeIn = new Animation cardDisplayPhotoIndicator,
-	scale: 1.25
+	scale: 1.30
 	opacity: 1
 	options:
 		curve: Bezier.easeInOut
@@ -52,8 +64,9 @@ fadeDestroy = new Animation cardDisplayPhotoIndicator,
 	opacity: 0
 
 # On Mouse Enter 
-cardWrapper.onMouseEnter ->
+cardWrapper.onMouseOver ->
 	fadeIn.start()
+	cardWrapper.stateCycle("onMouseEnter")
 		
 fadeIn.on Events.AnimationEnd, ->
 	fadeDestroy.start()
@@ -66,3 +79,4 @@ fadeDestroy.on Events.AnimationEnd, ->
 cardWrapper.onMouseOut ->
 	fadeIn.reset()
 	fadeIn.stop()
+	cardWrapper.stateCycle("default")
