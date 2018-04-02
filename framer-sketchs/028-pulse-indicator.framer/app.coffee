@@ -46,10 +46,17 @@ cardDisplayPhoto = new Layer
 cardLabel = new TextLayer
 	parent: cardWrapper
 	text: "Jasen Pearson"
+	fontWeight: "bold"
 	fontSize: 20
 	x: Align.left(cardDisplayPhoto.y + (spacer*3))
-	y: Align.center()
+	y: Align.center(-spacer/2)
 	
+cardSubLabel = new TextLayer
+	parent: cardWrapper
+	text: "22 hours ago"
+	fontSize: 16
+	x: Align.left(cardDisplayPhoto.y + (spacer*3))
+	y: Align.center(spacer/2)
 
 	
 # Setting up the animation blocks
