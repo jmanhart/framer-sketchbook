@@ -3,6 +3,7 @@ bkgLayer = new BackgroundLayer
 
 spacer = 10
 itemHeight = 150
+
 screenWrapper = new ScrollComponent
 	x: Align.center()
 	y: Align.center()

@@ -89,7 +89,7 @@ spacer = 25
 songList = new ScrollComponent
 	size: Screen.size
 	scrollHorizontal: false
-
+	backgroundColor: null
 
 album = new Layer
 	parent: songList.content
@@ -207,7 +207,8 @@ for i in [0...songsData[i].songs.length]
 
 now_playing.bringToFront()
 
-
+Album_01.y = Align.top()
+Album_01.x = Align.center()
 
 
 

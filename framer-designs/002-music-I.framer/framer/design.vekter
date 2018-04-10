@@ -1,5 +1,5 @@
 {
-  "version" : 19,
+  "version" : 21,
   "root" : {
     "id" : "B8JACmTBl",
     "__class" : "CanvasNode",
@@ -7,10 +7,12 @@
     "children" : [
       {
         "radius" : 0,
+        "brightness" : 100,
         "hueRotateEnabled" : 0,
         "children" : [
           {
             "radius" : 5,
+            "brightness" : 100,
             "hueRotateEnabled" : 0,
             "children" : [
 
@@ -20,8 +22,12 @@
             "exportOptions" : [
 
             ],
+            "exportIncludesBackground" : true,
             "grayScaleEnabled" : 0,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
             "constraintsLocked" : false,
+            "fillImageResize" : "fill",
             "blurType" : "layer",
             "fillColor" : "transparent",
             "widthFactor" : null,
@@ -32,31 +38,36 @@
             "left" : 25,
             "locked" : false,
             "sepiaEnabled" : 0,
+            "fillGradient" : {
+              "end" : "rgba(0,0,0,0)",
+              "alpha" : 1,
+              "angle" : 0,
+              "__class" : "LinearGradient",
+              "start" : "black"
+            },
             "blur" : 12,
-            "sepia" : 0,
             "radiusTopLeft" : 5,
+            "sepia" : 0,
             "borderColor" : "#222",
             "rotation" : 0,
-            "image" : "9yqz7FhT0ozsaka5Pw40zzrzxQ9wDuWllEqVYArsRMckqglY083xaV11IqacNrYdUCQne1Sek2WzKJjJsIcQ.jpg",
             "borderLeft" : 1,
-            "fillEnabled" : false,
+            "fillEnabled" : true,
             "right" : null,
             "opacity" : 1,
             "name" : null,
             "blendingMode" : "normal",
-            "originalFilename" : "album-art.jpg",
             "contrast" : 100,
             "centerAnchorY" : 0.5,
             "height" : 115,
             "borderWidth" : 1,
+            "radiusIsRelative" : false,
             "hueRotate" : 0,
             "borderStyle" : "solid",
             "brightnessEnabled" : 0,
             "borderPerSide" : false,
-            "imageBackgroundSize" : "Cover",
+            "saturateEnabled" : 0,
             "aspectRatioLocked" : true,
             "borderRight" : 1,
-            "saturateEnabled" : 0,
             "parentid" : "SG91MGEno",
             "intrinsicWidth" : 600,
             "radiusBottomLeft" : 5,
@@ -68,20 +79,22 @@
             "radiusPerCorner" : false,
             "radiusTopRight" : 5,
             "invert" : 0,
-            "__class" : "ImageNode",
+            "__class" : "FrameNode",
+            "fillImage" : "9yqz7FhT0ozsaka5Pw40zzrzxQ9wDuWllEqVYArsRMckqglY083xaV11IqacNrYdUCQne1Sek2WzKJjJsIcQ.jpg",
             "clip" : true,
+            "fillType" : "image",
             "visible" : true,
             "invertEnabled" : 0,
             "heightFactor" : null,
             "width" : 115,
-            "borderBottom" : 1,
             "intrinsicHeight" : 600,
-            "blurEnabled" : 0,
+            "borderBottom" : 1,
+            "deviceType" : null,
             "bottom" : 33,
             "borderTop" : 1,
             "targetName" : null,
             "radiusBottomRight" : 5,
-            "brightness" : 100
+            "blurEnabled" : 0
           },
           {
             "sepiaEnabled" : 0,
@@ -99,6 +112,18 @@
             "locked" : false,
             "left" : null,
             "styledText" : {
+              "cached" : {
+                "size" : {
+                  "width" : 172,
+                  "height" : 20
+                },
+                "os" : "10_12",
+                "width" : 171,
+                "html" : "<span data-offset-key=\"7jjs5-0-0\" style=\"tab-size:4;font-family:&quot;.SFNSText-Bold&quot;, &quot;SFProText-Bold&quot;, &quot;SFUIText-Bold&quot;, &quot;.SFUIText-Bold&quot;, sans-serif;-webkit-text-fill-color:rgba(239, 217, 88, 1.00);font-size:17px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">Nonagon Infinity<\/span><\/span>"
+              },
+              "entityMap" : {
+
+              },
               "blocks" : [
                 {
                   "depth" : 0,
@@ -146,10 +171,7 @@
                   "type" : "unstyled"
                 }
               ],
-              "__class" : "StyledTextDraft",
-              "entityMap" : {
-
-              }
+              "__class" : "StyledTextDraft"
             },
             "blendingMode" : "normal",
             "invert" : 0,
@@ -348,6 +370,18 @@
             "locked" : false,
             "left" : null,
             "styledText" : {
+              "cached" : {
+                "size" : {
+                  "width" : 133,
+                  "height" : 13
+                },
+                "os" : "10_12",
+                "width" : 0,
+                "html" : "<span data-offset-key=\"7jjs5-0-0\" style=\"tab-size:4;font-family:&quot;.SFNSText&quot;, &quot;SFProText-Regular&quot;, &quot;SFUIText-Regular&quot;, &quot;.SFUIText&quot;, sans-serif;-webkit-text-fill-color:rgba(239, 217, 88, 1.00);font-size:11px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">Psychedelic June 6, 2016<\/span><\/span>"
+              },
+              "entityMap" : {
+
+              },
               "blocks" : [
                 {
                   "depth" : 0,
@@ -383,10 +417,7 @@
                   "type" : "unstyled"
                 }
               ],
-              "__class" : "StyledTextDraft",
-              "entityMap" : {
-
-              }
+              "__class" : "StyledTextDraft"
             },
             "blendingMode" : "normal",
             "invert" : 0,
@@ -430,7 +461,10 @@
         ],
         "exportIncludesBackground" : true,
         "grayScaleEnabled" : 0,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
         "constraintsLocked" : false,
+        "fillImageResize" : "fill",
         "blurType" : "layer",
         "fillColor" : "rgb(88, 31, 25)",
         "widthFactor" : null,
@@ -472,6 +506,7 @@
         "aspectRatioLocked" : false,
         "borderRight" : 1,
         "parentid" : "B8JACmTBl",
+        "intrinsicWidth" : null,
         "radiusBottomLeft" : 0,
         "boxShadows" : [
 
@@ -482,27 +517,30 @@
         "radiusTopRight" : 0,
         "invert" : 0,
         "__class" : "FrameNode",
+        "fillImage" : null,
         "clip" : false,
-        "visible" : true,
         "fillType" : "color",
+        "visible" : true,
         "invertEnabled" : 0,
         "heightFactor" : null,
-        "width" : 373,
+        "width" : 375,
+        "intrinsicHeight" : null,
         "borderBottom" : 1,
-        "blurEnabled" : 0,
         "deviceType" : null,
         "bottom" : null,
         "borderTop" : 1,
-        "targetName" : null,
+        "targetName" : "Album_01",
         "radiusBottomRight" : 0,
-        "brightness" : 100
+        "blurEnabled" : 0
       },
       {
         "radius" : 0,
+        "brightness" : 100,
         "hueRotateEnabled" : 0,
         "children" : [
           {
             "radius" : 5,
+            "brightness" : 100,
             "hueRotateEnabled" : 0,
             "children" : [
 
@@ -512,8 +550,12 @@
             "exportOptions" : [
 
             ],
+            "exportIncludesBackground" : true,
             "grayScaleEnabled" : 0,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
             "constraintsLocked" : false,
+            "fillImageResize" : "fill",
             "blurType" : "layer",
             "fillColor" : "transparent",
             "widthFactor" : null,
@@ -524,31 +566,36 @@
             "left" : 25,
             "locked" : false,
             "sepiaEnabled" : 0,
+            "fillGradient" : {
+              "end" : "rgba(0,0,0,0)",
+              "alpha" : 1,
+              "angle" : 0,
+              "__class" : "LinearGradient",
+              "start" : "black"
+            },
             "blur" : 12,
-            "sepia" : 0,
             "radiusTopLeft" : 5,
+            "sepia" : 0,
             "borderColor" : "#222",
             "rotation" : 0,
-            "image" : "9yqz7FhT0ozsaka5Pw40zzrzxQ9wDuWllEqVYArsRMckqglY083xaV11IqacNrYdUCQne1Sek2WzKJjJsIcQ.jpg",
             "borderLeft" : 1,
-            "fillEnabled" : false,
+            "fillEnabled" : true,
             "right" : null,
             "opacity" : 1,
             "name" : null,
             "blendingMode" : "normal",
-            "originalFilename" : "album-art.jpg",
             "contrast" : 100,
             "centerAnchorY" : 0.5,
             "height" : 115,
             "borderWidth" : 1,
+            "radiusIsRelative" : false,
             "hueRotate" : 0,
             "borderStyle" : "solid",
             "brightnessEnabled" : 0,
             "borderPerSide" : false,
-            "imageBackgroundSize" : "Cover",
+            "saturateEnabled" : 0,
             "aspectRatioLocked" : true,
             "borderRight" : 1,
-            "saturateEnabled" : 0,
             "parentid" : "HIOyfJDQ4",
             "intrinsicWidth" : 600,
             "radiusBottomLeft" : 5,
@@ -560,20 +607,22 @@
             "radiusPerCorner" : false,
             "radiusTopRight" : 5,
             "invert" : 0,
-            "__class" : "ImageNode",
+            "__class" : "FrameNode",
+            "fillImage" : "9yqz7FhT0ozsaka5Pw40zzrzxQ9wDuWllEqVYArsRMckqglY083xaV11IqacNrYdUCQne1Sek2WzKJjJsIcQ.jpg",
             "clip" : true,
+            "fillType" : "image",
             "visible" : true,
             "invertEnabled" : 0,
             "heightFactor" : null,
             "width" : 115,
-            "borderBottom" : 1,
             "intrinsicHeight" : 600,
-            "blurEnabled" : 0,
+            "borderBottom" : 1,
+            "deviceType" : null,
             "bottom" : 33,
             "borderTop" : 1,
             "targetName" : null,
             "radiusBottomRight" : 5,
-            "brightness" : 100
+            "blurEnabled" : 0
           },
           {
             "sepiaEnabled" : 0,
@@ -591,6 +640,18 @@
             "locked" : false,
             "left" : null,
             "styledText" : {
+              "cached" : {
+                "size" : {
+                  "width" : 172,
+                  "height" : 20
+                },
+                "os" : "10_12",
+                "width" : 171,
+                "html" : "<span data-offset-key=\"7jjs5-0-0\" style=\"tab-size:4;font-family:&quot;.SFNSText-Bold&quot;, &quot;SFProText-Bold&quot;, &quot;SFUIText-Bold&quot;, &quot;.SFUIText-Bold&quot;, sans-serif;-webkit-text-fill-color:rgb(51, 51, 51);font-size:17px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">Nonagon Infinity<\/span><\/span>"
+              },
+              "entityMap" : {
+
+              },
               "blocks" : [
                 {
                   "depth" : 0,
@@ -638,10 +699,7 @@
                   "type" : "unstyled"
                 }
               ],
-              "__class" : "StyledTextDraft",
-              "entityMap" : {
-
-              }
+              "__class" : "StyledTextDraft"
             },
             "blendingMode" : "normal",
             "invert" : 0,
@@ -840,6 +898,18 @@
             "locked" : false,
             "left" : null,
             "styledText" : {
+              "cached" : {
+                "size" : {
+                  "width" : 133,
+                  "height" : 13
+                },
+                "os" : "10_12",
+                "width" : 0,
+                "html" : "<span data-offset-key=\"7jjs5-0-0\" style=\"tab-size:4;font-family:&quot;.SFNSText&quot;, &quot;SFProText-Regular&quot;, &quot;SFUIText-Regular&quot;, &quot;.SFUIText&quot;, sans-serif;-webkit-text-fill-color:rgb(51, 51, 51);font-size:11px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">Psychedelic June 6, 2016<\/span><\/span>"
+              },
+              "entityMap" : {
+
+              },
               "blocks" : [
                 {
                   "depth" : 0,
@@ -875,10 +945,7 @@
                   "type" : "unstyled"
                 }
               ],
-              "__class" : "StyledTextDraft",
-              "entityMap" : {
-
-              }
+              "__class" : "StyledTextDraft"
             },
             "blendingMode" : "normal",
             "invert" : 0,
@@ -922,7 +989,10 @@
         ],
         "exportIncludesBackground" : true,
         "grayScaleEnabled" : 0,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
         "constraintsLocked" : false,
+        "fillImageResize" : "fill",
         "blurType" : "layer",
         "fillColor" : "rgba(255, 255, 255, 0)",
         "widthFactor" : null,
@@ -964,6 +1034,7 @@
         "aspectRatioLocked" : false,
         "borderRight" : 1,
         "parentid" : "B8JACmTBl",
+        "intrinsicWidth" : null,
         "radiusBottomLeft" : 0,
         "boxShadows" : [
 
@@ -974,23 +1045,25 @@
         "radiusTopRight" : 0,
         "invert" : 0,
         "__class" : "FrameNode",
+        "fillImage" : null,
         "clip" : false,
-        "visible" : true,
         "fillType" : "color",
+        "visible" : true,
         "invertEnabled" : 0,
         "heightFactor" : null,
         "width" : 375,
+        "intrinsicHeight" : null,
         "borderBottom" : 1,
-        "blurEnabled" : 0,
         "deviceType" : null,
         "bottom" : null,
         "borderTop" : 1,
         "targetName" : "album_header",
         "radiusBottomRight" : 0,
-        "brightness" : 100
+        "blurEnabled" : 0
       },
       {
         "radius" : 0,
+        "brightness" : 100,
         "hueRotateEnabled" : 0,
         "children" : [
           {
@@ -1009,6 +1082,18 @@
             "locked" : false,
             "left" : 25,
             "styledText" : {
+              "cached" : {
+                "size" : {
+                  "width" : 9,
+                  "height" : 20
+                },
+                "os" : "10_12",
+                "width" : 0,
+                "html" : "<span data-offset-key=\"7jjs5-0-0\" style=\"tab-size:4;font-family:&quot;.SFNSText&quot;, &quot;SFProText-Regular&quot;, &quot;SFUIText-Regular&quot;, &quot;.SFUIText&quot;, sans-serif;-webkit-text-fill-color:rgb(0, 0, 0);font-size:17px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">1<\/span><\/span>"
+              },
+              "entityMap" : {
+
+              },
               "blocks" : [
                 {
                   "depth" : 0,
@@ -1056,10 +1141,7 @@
                   "type" : "unstyled"
                 }
               ],
-              "__class" : "StyledTextDraft",
-              "entityMap" : {
-
-              }
+              "__class" : "StyledTextDraft"
             },
             "blendingMode" : "normal",
             "invert" : 0,
@@ -1111,6 +1193,18 @@
             "locked" : false,
             "left" : 55,
             "styledText" : {
+              "cached" : {
+                "size" : {
+                  "width" : 175,
+                  "height" : 13
+                },
+                "os" : "10_12",
+                "width" : 0,
+                "html" : "<span data-offset-key=\"7jjs5-0-0\" style=\"tab-size:4;font-family:&quot;.SFNSText&quot;, &quot;SFProText-Regular&quot;, &quot;SFUIText-Regular&quot;, &quot;.SFUIText&quot;, sans-serif;-webkit-text-fill-color:#555555;font-size:11px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">King Gizzard &amp; The Lizard Wizard<\/span><\/span>"
+              },
+              "entityMap" : {
+
+              },
               "blocks" : [
                 {
                   "depth" : 0,
@@ -1158,10 +1252,7 @@
                   "type" : "unstyled"
                 }
               ],
-              "__class" : "StyledTextDraft",
-              "entityMap" : {
-
-              }
+              "__class" : "StyledTextDraft"
             },
             "blendingMode" : "normal",
             "invert" : 0,
@@ -1213,6 +1304,18 @@
             "locked" : false,
             "left" : 55,
             "styledText" : {
+              "cached" : {
+                "size" : {
+                  "width" : 85,
+                  "height" : 18
+                },
+                "os" : "10_12",
+                "width" : 0,
+                "html" : "<span data-offset-key=\"7jjs5-0-0\" style=\"tab-size:4;font-family:&quot;.SFNSText-Bold&quot;, &quot;SFProText-Bold&quot;, &quot;SFUIText-Bold&quot;, &quot;.SFUIText-Bold&quot;, sans-serif;-webkit-text-fill-color:#333333;font-size:15px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">Robot Stop<\/span><\/span>"
+              },
+              "entityMap" : {
+
+              },
               "blocks" : [
                 {
                   "depth" : 0,
@@ -1260,10 +1363,7 @@
                   "type" : "unstyled"
                 }
               ],
-              "__class" : "StyledTextDraft",
-              "entityMap" : {
-
-              }
+              "__class" : "StyledTextDraft"
             },
             "blendingMode" : "normal",
             "invert" : 0,
@@ -1315,6 +1415,18 @@
             "locked" : false,
             "left" : null,
             "styledText" : {
+              "cached" : {
+                "size" : {
+                  "width" : 31,
+                  "height" : 16
+                },
+                "os" : "10_12",
+                "width" : 0,
+                "html" : "<span data-offset-key=\"7jjs5-0-0\" style=\"tab-size:4;font-family:&quot;.SFNSText&quot;, &quot;SFProText-Regular&quot;, &quot;SFUIText-Regular&quot;, &quot;.SFUIText&quot;, sans-serif;-webkit-text-fill-color:rgb(0, 0, 0);font-size:14px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">5:22<\/span><\/span>"
+              },
+              "entityMap" : {
+
+              },
               "blocks" : [
                 {
                   "depth" : 0,
@@ -1362,10 +1474,7 @@
                   "type" : "unstyled"
                 }
               ],
-              "__class" : "StyledTextDraft",
-              "entityMap" : {
-
-              }
+              "__class" : "StyledTextDraft"
             },
             "blendingMode" : "normal",
             "invert" : 0,
@@ -1409,7 +1518,10 @@
         ],
         "exportIncludesBackground" : true,
         "grayScaleEnabled" : 0,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
         "constraintsLocked" : false,
+        "fillImageResize" : "fill",
         "blurType" : "layer",
         "fillColor" : "#FFFFFF",
         "widthFactor" : null,
@@ -1451,6 +1563,7 @@
         "aspectRatioLocked" : false,
         "borderRight" : 1,
         "parentid" : "B8JACmTBl",
+        "intrinsicWidth" : null,
         "radiusBottomLeft" : 0,
         "boxShadows" : [
 
@@ -1461,33 +1574,38 @@
         "radiusTopRight" : 0,
         "invert" : 0,
         "__class" : "FrameNode",
+        "fillImage" : null,
         "clip" : false,
-        "visible" : true,
         "fillType" : "color",
+        "visible" : true,
         "invertEnabled" : 0,
         "heightFactor" : null,
         "width" : 375,
+        "intrinsicHeight" : null,
         "borderBottom" : 1,
-        "blurEnabled" : 0,
         "deviceType" : null,
         "bottom" : null,
         "borderTop" : 1,
         "targetName" : "song_01",
         "radiusBottomRight" : 0,
-        "brightness" : 100
+        "blurEnabled" : 0
       },
       {
         "radius" : 0,
+        "brightness" : 100,
         "hueRotateEnabled" : 0,
         "children" : [
           {
             "radiusBottomLeft" : 0,
             "rotation" : 0,
-            "__class" : "RectangleShapeNode",
+            "fillImagePixelHeight" : null,
             "id" : "ivigOmszq",
-            "strokeWidth" : 1,
+            "fillImage" : null,
             "fillColor" : "#FFFFFF",
             "aspectRatioLocked" : false,
+            "strokeWidth" : 1,
+            "__class" : "RectangleShapeNode",
+            "fillImageResize" : "fill",
             "opacity" : 1,
             "locked" : false,
             "fillGradient" : {
@@ -1524,6 +1642,7 @@
             "name" : null,
             "height" : 76,
             "radiusTopRight" : 0,
+            "fillImagePixelWidth" : null,
             "lineCap" : "butt",
             "strokeColor" : "#0AF",
             "strokeAlignment" : "center",
@@ -1531,12 +1650,14 @@
             "visible" : true,
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
+            "targetName" : null,
             "x" : 0,
             "width" : 375,
             "y" : 0
           },
           {
             "radius" : 2,
+            "brightness" : 100,
             "hueRotateEnabled" : 0,
             "children" : [
 
@@ -1546,8 +1667,12 @@
             "exportOptions" : [
 
             ],
+            "exportIncludesBackground" : true,
             "grayScaleEnabled" : 0,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
             "constraintsLocked" : false,
+            "fillImageResize" : "fill",
             "blurType" : "layer",
             "fillColor" : "transparent",
             "widthFactor" : null,
@@ -1558,31 +1683,36 @@
             "left" : 11,
             "locked" : false,
             "sepiaEnabled" : 0,
+            "fillGradient" : {
+              "end" : "rgba(0,0,0,0)",
+              "alpha" : 1,
+              "angle" : 0,
+              "__class" : "LinearGradient",
+              "start" : "black"
+            },
             "blur" : 12,
-            "sepia" : 0,
             "radiusTopLeft" : 2,
+            "sepia" : 0,
             "borderColor" : "#222",
             "rotation" : 0,
-            "image" : "9yqz7FhT0ozsaka5Pw40zzrzxQ9wDuWllEqVYArsRMckqglY083xaV11IqacNrYdUCQne1Sek2WzKJjJsIcQ.jpg",
             "borderLeft" : 1,
-            "fillEnabled" : false,
+            "fillEnabled" : true,
             "right" : null,
             "opacity" : 1,
             "name" : null,
             "blendingMode" : "normal",
-            "originalFilename" : "album-art.jpg",
             "contrast" : 100,
             "centerAnchorY" : 0.5394736842105263,
             "height" : 48,
             "borderWidth" : 1,
+            "radiusIsRelative" : false,
             "hueRotate" : 0,
             "borderStyle" : "solid",
             "brightnessEnabled" : 0,
             "borderPerSide" : false,
-            "imageBackgroundSize" : "Cover",
+            "saturateEnabled" : 0,
             "aspectRatioLocked" : true,
             "borderRight" : 1,
-            "saturateEnabled" : 0,
             "parentid" : "XSf1Nj18S",
             "intrinsicWidth" : 600,
             "radiusBottomLeft" : 2,
@@ -1594,23 +1724,26 @@
             "radiusPerCorner" : false,
             "radiusTopRight" : 2,
             "invert" : 0,
-            "__class" : "ImageNode",
+            "__class" : "FrameNode",
+            "fillImage" : "9yqz7FhT0ozsaka5Pw40zzrzxQ9wDuWllEqVYArsRMckqglY083xaV11IqacNrYdUCQne1Sek2WzKJjJsIcQ.jpg",
             "clip" : true,
+            "fillType" : "image",
             "visible" : true,
             "invertEnabled" : 0,
             "heightFactor" : null,
             "width" : 48,
-            "borderBottom" : 1,
             "intrinsicHeight" : 600,
-            "blurEnabled" : 0,
+            "borderBottom" : 1,
+            "deviceType" : null,
             "bottom" : 11,
             "borderTop" : 1,
             "targetName" : null,
             "radiusBottomRight" : 2,
-            "brightness" : 100
+            "blurEnabled" : 0
           },
           {
             "radius" : 0,
+            "brightness" : 100,
             "hueRotateEnabled" : 0,
             "children" : [
 
@@ -1622,7 +1755,10 @@
             ],
             "exportIncludesBackground" : true,
             "grayScaleEnabled" : 0,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
             "constraintsLocked" : false,
+            "fillImageResize" : "fill",
             "blurType" : "layer",
             "fillColor" : "#DDDDDD",
             "widthFactor" : null,
@@ -1664,6 +1800,7 @@
             "aspectRatioLocked" : false,
             "borderRight" : 1,
             "parentid" : "XSf1Nj18S",
+            "intrinsicWidth" : null,
             "radiusBottomLeft" : 0,
             "boxShadows" : [
 
@@ -1674,23 +1811,25 @@
             "radiusTopRight" : 0,
             "invert" : 0,
             "__class" : "FrameNode",
+            "fillImage" : null,
             "clip" : false,
-            "visible" : true,
             "fillType" : "color",
+            "visible" : true,
             "invertEnabled" : 0,
             "heightFactor" : null,
             "width" : 375,
+            "intrinsicHeight" : null,
             "borderBottom" : 1,
-            "blurEnabled" : 0,
             "deviceType" : null,
             "bottom" : null,
             "borderTop" : 1,
             "targetName" : "progress_fill",
             "radiusBottomRight" : 0,
-            "brightness" : 100
+            "blurEnabled" : 0
           },
           {
             "radius" : 0,
+            "brightness" : 100,
             "hueRotateEnabled" : 0,
             "children" : [
 
@@ -1702,7 +1841,10 @@
             ],
             "exportIncludesBackground" : true,
             "grayScaleEnabled" : 0,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
             "constraintsLocked" : false,
+            "fillImageResize" : "fill",
             "blurType" : "layer",
             "fillColor" : "rgba(88, 31, 25, 1.00)",
             "widthFactor" : null,
@@ -1744,6 +1886,7 @@
             "aspectRatioLocked" : false,
             "borderRight" : 1,
             "parentid" : "XSf1Nj18S",
+            "intrinsicWidth" : null,
             "radiusBottomLeft" : 0,
             "boxShadows" : [
 
@@ -1754,20 +1897,21 @@
             "radiusTopRight" : 0,
             "invert" : 0,
             "__class" : "FrameNode",
+            "fillImage" : null,
             "clip" : false,
-            "visible" : true,
             "fillType" : "color",
+            "visible" : true,
             "invertEnabled" : 0,
             "heightFactor" : null,
             "width" : 135,
+            "intrinsicHeight" : null,
             "borderBottom" : 1,
-            "blurEnabled" : 0,
             "deviceType" : null,
             "bottom" : null,
             "borderTop" : 1,
             "targetName" : "progress_bar",
             "radiusBottomRight" : 0,
-            "brightness" : 100
+            "blurEnabled" : 0
           },
           {
             "sepiaEnabled" : 0,
@@ -1785,6 +1929,18 @@
             "locked" : false,
             "left" : 71,
             "styledText" : {
+              "cached" : {
+                "size" : {
+                  "width" : 159,
+                  "height" : 12
+                },
+                "os" : "10_12",
+                "width" : 0,
+                "html" : "<span data-offset-key=\"7jjs5-0-0\" style=\"tab-size:4;font-family:&quot;.SFNSText&quot;, &quot;SFProText-Regular&quot;, &quot;SFUIText-Regular&quot;, &quot;.SFUIText&quot;, sans-serif;-webkit-text-fill-color:#555555;font-size:10px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">King Gizzard &amp; The Lizard Wizard<\/span><\/span>"
+              },
+              "entityMap" : {
+
+              },
               "blocks" : [
                 {
                   "depth" : 0,
@@ -1832,10 +1988,7 @@
                   "type" : "unstyled"
                 }
               ],
-              "__class" : "StyledTextDraft",
-              "entityMap" : {
-
-              }
+              "__class" : "StyledTextDraft"
             },
             "blendingMode" : "normal",
             "invert" : 0,
@@ -1887,6 +2040,18 @@
             "locked" : false,
             "left" : 71,
             "styledText" : {
+              "cached" : {
+                "size" : {
+                  "width" : 64,
+                  "height" : 18
+                },
+                "os" : "10_12",
+                "width" : 0,
+                "html" : "<span data-offset-key=\"7jjs5-0-0\" style=\"tab-size:4;font-family:&quot;.SFNSText-Bold&quot;, &quot;SFProText-Bold&quot;, &quot;SFUIText-Bold&quot;, &quot;.SFUIText-Bold&quot;, sans-serif;-webkit-text-fill-color:#333333;font-size:15px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">Mr. Beat<\/span><\/span>"
+              },
+              "entityMap" : {
+
+              },
               "blocks" : [
                 {
                   "depth" : 0,
@@ -1934,10 +2099,7 @@
                   "type" : "unstyled"
                 }
               ],
-              "__class" : "StyledTextDraft",
-              "entityMap" : {
-
-              }
+              "__class" : "StyledTextDraft"
             },
             "blendingMode" : "normal",
             "invert" : 0,
@@ -1974,30 +2136,17 @@
             "brightness" : 100
           },
           {
-            "__class" : "PathNode",
-            "fillType" : "color",
-            "lineJoin" : "miter",
             "rotation" : 0,
-            "parentid" : "XSf1Nj18S",
-            "strokeColor" : "#0AF",
-            "locked" : false,
-            "fillEnabled" : true,
-            "pathClosed" : true,
-            "exportOptions" : [
-
-            ],
-            "strokeAlignment" : "center",
-            "strokeWidth" : 1,
-            "name" : null,
-            "aspectRatioLocked" : false,
-            "strokeEnabled" : 0,
-            "lineCap" : "butt",
+            "fillImagePixelHeight" : null,
             "id" : "ONljkwNDw",
-            "strokeMiterLimit" : 4,
-            "boxShadows" : [
-
-            ],
-            "strokeDashOffset" : 0,
+            "fillImage" : null,
+            "fillColor" : "rgba(88, 31, 25, 1.00)",
+            "aspectRatioLocked" : false,
+            "strokeWidth" : 1,
+            "__class" : "PathNode",
+            "fillImageResize" : "fill",
+            "opacity" : 1,
+            "locked" : false,
             "fillGradient" : {
               "end" : "rgba(0,0,0,0)",
               "alpha" : 1,
@@ -2005,14 +2154,22 @@
               "__class" : "LinearGradient",
               "start" : "black"
             },
-            "opacity" : 1,
-            "height" : 29.4448637286709,
-            "x" : 334.2,
-            "width" : 23.80000000000001,
+            "strokeDashOffset" : 0,
+            "boxShadows" : [
+
+            ],
+            "fillType" : "color",
+            "strokeEnabled" : 0,
+            "lineJoin" : "miter",
+            "fillEnabled" : true,
+            "parentid" : "XSf1Nj18S",
             "strokeDashArray" : "0",
-            "fillColor" : "rgba(88, 31, 25, 1.00)",
-            "y" : 25.27756813566454,
-            "visible" : true,
+            "exportOptions" : [
+
+            ],
+            "name" : null,
+            "height" : 29.4448637286709,
+            "fillImagePixelWidth" : null,
             "pathSegments" : [
               {
                 "x" : 23.80000000000001,
@@ -2047,7 +2204,17 @@
                 "__class" : "PathSegment",
                 "handleMirroring" : "straight"
               }
-            ]
+            ],
+            "lineCap" : "butt",
+            "strokeColor" : "#0AF",
+            "strokeAlignment" : "center",
+            "strokeMiterLimit" : 4,
+            "visible" : true,
+            "pathClosed" : true,
+            "targetName" : null,
+            "x" : 334.2,
+            "width" : 23.80000000000001,
+            "y" : 25.27756813566454
           }
         ],
         "centerAnchorX" : 1.454666666666667,
@@ -2057,7 +2224,10 @@
         ],
         "exportIncludesBackground" : true,
         "grayScaleEnabled" : 0,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
         "constraintsLocked" : false,
+        "fillImageResize" : "fill",
         "blurType" : "layer",
         "fillColor" : "rgba(255,255,255,1)",
         "widthFactor" : null,
@@ -2099,6 +2269,7 @@
         "aspectRatioLocked" : false,
         "borderRight" : 1,
         "parentid" : "B8JACmTBl",
+        "intrinsicWidth" : null,
         "radiusBottomLeft" : 0,
         "boxShadows" : [
           {
@@ -2118,20 +2289,21 @@
         "radiusTopRight" : 0,
         "invert" : 0,
         "__class" : "FrameNode",
+        "fillImage" : null,
         "clip" : false,
-        "visible" : true,
         "fillType" : "color",
+        "visible" : true,
         "invertEnabled" : 0,
         "heightFactor" : null,
         "width" : 375,
+        "intrinsicHeight" : null,
         "borderBottom" : 1,
-        "blurEnabled" : 0,
         "deviceType" : null,
         "bottom" : null,
         "borderTop" : 1,
         "targetName" : "now_playing",
         "radiusBottomRight" : 0,
-        "brightness" : 100
+        "blurEnabled" : 0
       }
     ]
   }

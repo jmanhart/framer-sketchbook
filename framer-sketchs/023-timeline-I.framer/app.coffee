@@ -5,7 +5,7 @@ bkgLayer = new BackgroundLayer
 	
 	
 spacer = 20
-itemContainerHeight = 350
+itemContainerHeight = 250
 timeLineColor = 'rgba(0,0,0,0.1)'
 
 
@@ -25,7 +25,7 @@ timelineScroll.contentInset =
 	top: 200
 
 
-for i in [0...5]
+for i in [0...3]
 	itemContainer = new Layer
 		parent: timelineScroll.content
 		width: Screen.width
