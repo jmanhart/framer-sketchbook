@@ -1,0 +1,61 @@
+{
+  "version" : 21,
+  "root" : {
+    "id" : "Vse6FowqZ",
+    "__class" : "CanvasNode",
+    "parentid" : null,
+    "children" : [
+      {
+        "radiusBottomLeft" : 0,
+        "rotation" : 0,
+        "fillImagePixelHeight" : null,
+        "id" : "ux0JPvkkK",
+        "fillImage" : null,
+        "fillColor" : "#7955F0",
+        "aspectRatioLocked" : false,
+        "strokeWidth" : 1,
+        "__class" : "RectangleShapeNode",
+        "fillImageResize" : "fill",
+        "opacity" : 1,
+        "locked" : false,
+        "fillGradient" : {
+          "end" : "rgba(0,0,0,0)",
+          "alpha" : 1,
+          "angle" : 0,
+          "__class" : "LinearGradient",
+          "start" : "black"
+        },
+        "radius" : 0,
+        "strokeDashOffset" : 0,
+        "boxShadows" : [
+
+        ],
+        "fillType" : "color",
+        "strokeEnabled" : 0,
+        "lineJoin" : "miter",
+        "radiusBottomRight" : 0,
+        "fillEnabled" : false,
+        "parentid" : "Vse6FowqZ",
+        "strokeDashArray" : "0",
+        "exportOptions" : [
+
+        ],
+        "name" : null,
+        "height" : 315,
+        "radiusTopRight" : 0,
+        "fillImagePixelWidth" : null,
+        "lineCap" : "butt",
+        "strokeColor" : "#0AF",
+        "strokeAlignment" : "center",
+        "strokeMiterLimit" : 4,
+        "visible" : true,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "targetName" : null,
+        "x" : 0,
+        "width" : 301,
+        "y" : 0
+      }
+    ]
+  }
+}
