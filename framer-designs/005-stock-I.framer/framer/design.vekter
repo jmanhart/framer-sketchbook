@@ -4811,7 +4811,14 @@
         "centerAnchorX" : -0.3906666666666667,
         "id" : "elXjbyxSp",
         "exportOptions" : [
-
+          {
+            "nameExtensionMode" : "Suffix",
+            "nameExtension" : "@3x",
+            "enabled" : true,
+            "__class" : "ExportOptions",
+            "type" : "png",
+            "scale" : 3
+          }
         ],
         "exportIncludesBackground" : true,
         "grayScaleEnabled" : 0,
@@ -4866,7 +4873,7 @@
           {
             "x" : 0,
             "color" : "rgba(0,0,0,0.25)",
-            "enabled" : true,
+            "enabled" : false,
             "y" : 2,
             "spread" : 0,
             "__class" : "BoxShadow",
@@ -5259,7 +5266,7 @@
         "visible" : true,
         "pathClosed" : true,
         "targetName" : null,
-        "x" : 788,
+        "x" : 1216,
         "width" : 375,
         "y" : 412
       },
@@ -5604,7 +5611,7 @@
         "visible" : true,
         "pathClosed" : false,
         "targetName" : null,
-        "x" : 788,
+        "x" : 1216,
         "width" : 375,
         "y" : 412
       },
@@ -9533,7 +9540,7 @@
         "grayscale" : 0,
         "top" : 0,
         "saturate" : 100,
-        "left" : -472,
+        "left" : 760,
         "locked" : false,
         "sepiaEnabled" : 0,
         "fillGradient" : {
