@@ -6,7 +6,7 @@ bkg = new BackgroundLayer
 flow = new FlowComponent
 
  
-flow.showNext(realTime)	
+flow.showNext(shareAdd)	
 		
 buyBtn.onTap ->
 	flow.showOverlayBottom(buyScreen)
