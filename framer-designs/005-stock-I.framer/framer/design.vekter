@@ -5100,15 +5100,15 @@
                     "opacity" : 1,
                     "contrastEnabled" : 0,
                     "locked" : false,
-                    "left" : 54,
+                    "left" : null,
                     "styledText" : {
                       "cached" : {
                         "size" : {
-                          "width" : 257,
+                          "width" : 132,
                           "height" : 19
                         },
                         "os" : "10_12",
-                        "width" : 256,
+                        "width" : 0,
                         "html" : "<span data-offset-key=\"ffr94-0-0\" style=\"tab-size:4;font-family:&quot;WorkSans-Medium&quot;, &quot;Work Sans&quot;, sans-serif;-webkit-text-fill-color:hsl(0, 0%, 100%);font-size:16px;letter-spacing:0px;line-height:1.2;font-weight:500\"><span data-text=\"true\">Purchase Shares<\/span><\/span>"
                       },
                       "entityMap" : {
@@ -5119,34 +5119,34 @@
                           "depth" : 0,
                           "inlineStyleRanges" : [
                             {
+                              "length" : 15,
                               "style" : "LETTERSPACING:0",
-                              "offset" : 0,
-                              "length" : 15
+                              "offset" : 0
                             },
                             {
+                              "length" : 15,
                               "style" : "LINEHEIGHT:1.2",
-                              "offset" : 0,
-                              "length" : 15
+                              "offset" : 0
                             },
                             {
+                              "length" : 15,
                               "style" : "FONT:WorkSans-Medium",
-                              "offset" : 0,
-                              "length" : 15
+                              "offset" : 0
                             },
                             {
+                              "length" : 15,
                               "style" : "SIZE:16",
-                              "offset" : 0,
-                              "length" : 15
+                              "offset" : 0
                             },
                             {
+                              "length" : 15,
                               "style" : "ALIGN:center",
-                              "offset" : 0,
-                              "length" : 15
+                              "offset" : 0
                             },
                             {
+                              "length" : 15,
                               "style" : "COLOR:hsl(0, 0%, 100%)",
-                              "offset" : 0,
-                              "length" : 15
+                              "offset" : 0
                             }
                           ],
                           "entityRanges" : [
@@ -5172,7 +5172,7 @@
                     "blendingMode" : "normal",
                     "invert" : 0,
                     "sepia" : 0,
-                    "centerAnchorX" : 0.4853333333333333,
+                    "centerAnchorX" : 0.5013333333333333,
                     "blurEnabled" : 0,
                     "shadows" : [
 
@@ -5184,23 +5184,23 @@
                     ],
                     "name" : "monthTitle",
                     "saturate" : 100,
-                    "height" : 23,
+                    "height" : 19,
                     "blendingEnabled" : 0,
                     "top" : null,
                     "constraintsLocked" : false,
-                    "right" : 65,
+                    "right" : null,
                     "visible" : true,
-                    "centerAnchorY" : 0.55,
+                    "centerAnchorY" : 0.51,
                     "contrast" : 100,
                     "grayScaleEnabled" : 0,
                     "hueRotate" : 0,
                     "heightFactor" : null,
                     "targetName" : null,
-                    "bottom" : 11,
+                    "bottom" : null,
                     "blur" : 12,
-                    "autoSize" : false,
+                    "autoSize" : true,
                     "invertEnabled" : 0,
-                    "width" : 256,
+                    "width" : 132,
                     "brightness" : 100
                   }
                 ],
@@ -9605,6 +9605,341 @@
             "targetName" : null,
             "radiusBottomRight" : 0,
             "blurEnabled" : 0
+          },
+          {
+            "sepiaEnabled" : 0,
+            "editable" : false,
+            "rotation" : 0,
+            "blurType" : "layer",
+            "__class" : "TextNode",
+            "id" : "AA6hIpiJh",
+            "saturateEnabled" : 0,
+            "grayscale" : 0,
+            "hueRotateEnabled" : 0,
+            "widthFactor" : null,
+            "opacity" : 1,
+            "contrastEnabled" : 0,
+            "locked" : false,
+            "left" : 120,
+            "styledText" : {
+              "cached" : {
+                "size" : {
+                  "width" : 126,
+                  "height" : 81
+                },
+                "os" : "10_12",
+                "width" : 0,
+                "html" : "<span data-offset-key=\"ffr94-0-0\" style=\"tab-size:4;font-family:&quot;WorkSans-Medium&quot;, &quot;Work Sans&quot;, sans-serif;-webkit-text-fill-color:rgba(48, 78, 255, 1.00);font-size:68px;letter-spacing:0px;line-height:1.2;font-weight:500\"><span data-text=\"true\">500<\/span><\/span>"
+              },
+              "entityMap" : {
+
+              },
+              "blocks" : [
+                {
+                  "depth" : 0,
+                  "inlineStyleRanges" : [
+                    {
+                      "length" : 3,
+                      "style" : "LINEHEIGHT:1.2",
+                      "offset" : 0
+                    },
+                    {
+                      "length" : 3,
+                      "style" : "FONT:WorkSans-Medium",
+                      "offset" : 0
+                    },
+                    {
+                      "length" : 3,
+                      "style" : "COLOR:rgba(48, 78, 255, 1.00)",
+                      "offset" : 0
+                    },
+                    {
+                      "length" : 3,
+                      "style" : "LETTERSPACING:0",
+                      "offset" : 0
+                    },
+                    {
+                      "length" : 3,
+                      "style" : "SIZE:68",
+                      "offset" : 0
+                    },
+                    {
+                      "length" : 3,
+                      "style" : "ALIGN:center",
+                      "offset" : 0
+                    }
+                  ],
+                  "entityRanges" : [
+
+                  ],
+                  "data" : {
+                    "emptyStyle" : [
+                      "LINEHEIGHT:1.2",
+                      "FONT:WorkSans-Medium",
+                      "COLOR:rgba(48, 78, 255, 1.00)",
+                      "LETTERSPACING:0",
+                      "SIZE:68",
+                      "ALIGN:center"
+                    ]
+                  },
+                  "text" : "500",
+                  "key" : "ffr94",
+                  "type" : "unstyled"
+                }
+              ],
+              "__class" : "StyledTextDraft"
+            },
+            "blendingMode" : "normal",
+            "invert" : 0,
+            "sepia" : 0,
+            "centerAnchorX" : 0.4906666666666666,
+            "blurEnabled" : 0,
+            "shadows" : [
+
+            ],
+            "parentid" : "s_uOlQQEX",
+            "brightnessEnabled" : 0,
+            "exportOptions" : [
+
+            ],
+            "name" : "shareAmount",
+            "saturate" : 100,
+            "height" : 81,
+            "blendingEnabled" : 0,
+            "top" : 93,
+            "constraintsLocked" : false,
+            "right" : null,
+            "visible" : true,
+            "centerAnchorY" : 0.2001499250374812,
+            "contrast" : 100,
+            "grayScaleEnabled" : 0,
+            "hueRotate" : 0,
+            "heightFactor" : null,
+            "targetName" : null,
+            "bottom" : null,
+            "blur" : 12,
+            "autoSize" : true,
+            "invertEnabled" : 0,
+            "width" : 126,
+            "brightness" : 100
+          },
+          {
+            "sepiaEnabled" : 0,
+            "editable" : false,
+            "rotation" : 0,
+            "blurType" : "layer",
+            "__class" : "TextNode",
+            "id" : "OoV885ct0",
+            "saturateEnabled" : 0,
+            "grayscale" : 0,
+            "hueRotateEnabled" : 0,
+            "widthFactor" : null,
+            "opacity" : 1,
+            "contrastEnabled" : 0,
+            "locked" : false,
+            "left" : 42,
+            "styledText" : {
+              "blocks" : [
+                {
+                  "depth" : 0,
+                  "inlineStyleRanges" : [
+                    {
+                      "length" : 10,
+                      "style" : "FONT:WorkSans-Medium",
+                      "offset" : 0
+                    },
+                    {
+                      "length" : 17,
+                      "style" : "COLOR:rgb(56, 56, 56)",
+                      "offset" : 0
+                    },
+                    {
+                      "length" : 17,
+                      "style" : "SIZE:22",
+                      "offset" : 0
+                    },
+                    {
+                      "length" : 17,
+                      "style" : "ALIGN:center",
+                      "offset" : 0
+                    },
+                    {
+                      "length" : 7,
+                      "style" : "FONT:WorkSans-SemiBold",
+                      "offset" : 10
+                    }
+                  ],
+                  "entityRanges" : [
+
+                  ],
+                  "data" : {
+                    "emptyStyle" : [
+                      "FONT:WorkSans-Medium",
+                      "COLOR:rgb(56, 56, 56)",
+                      "SIZE:22",
+                      "ALIGN:center"
+                    ]
+                  },
+                  "text" : "Shares at $166.55",
+                  "key" : "ffr94",
+                  "type" : "unstyled"
+                }
+              ],
+              "__class" : "StyledTextDraft",
+              "entityMap" : {
+
+              }
+            },
+            "blendingMode" : "normal",
+            "invert" : 0,
+            "sepia" : 0,
+            "centerAnchorX" : 0.484,
+            "blurEnabled" : 0,
+            "shadows" : [
+
+            ],
+            "parentid" : "s_uOlQQEX",
+            "brightnessEnabled" : 0,
+            "exportOptions" : [
+
+            ],
+            "name" : null,
+            "saturate" : 100,
+            "height" : 30,
+            "blendingEnabled" : 0,
+            "top" : 194,
+            "constraintsLocked" : false,
+            "right" : 54,
+            "visible" : true,
+            "centerAnchorY" : 0.3133433283358321,
+            "contrast" : 100,
+            "grayScaleEnabled" : 0,
+            "hueRotate" : 0,
+            "heightFactor" : null,
+            "targetName" : null,
+            "bottom" : null,
+            "blur" : 12,
+            "autoSize" : false,
+            "invertEnabled" : 0,
+            "width" : 279,
+            "brightness" : 100
+          },
+          {
+            "sepiaEnabled" : 0,
+            "editable" : false,
+            "rotation" : 0,
+            "blurType" : "layer",
+            "__class" : "TextNode",
+            "id" : "y1tZ6xu1Y",
+            "saturateEnabled" : 0,
+            "grayscale" : 0,
+            "hueRotateEnabled" : 0,
+            "widthFactor" : null,
+            "opacity" : 1,
+            "contrastEnabled" : 0,
+            "locked" : false,
+            "left" : 140,
+            "styledText" : {
+              "cached" : {
+                "size" : {
+                  "width" : 83,
+                  "height" : 15
+                },
+                "os" : "10_12",
+                "width" : 0,
+                "html" : "<span data-offset-key=\"ffr94-0-0\" style=\"tab-size:4;font-family:&quot;WorkSans-Medium&quot;, &quot;Work Sans&quot;, sans-serif;-webkit-text-fill-color:rgba(47, 77, 255, 1.00);font-size:13px;letter-spacing:0px;line-height:1.2;font-weight:500\"><span data-text=\"true\">Bulk Options<\/span><\/span>"
+              },
+              "entityMap" : {
+
+              },
+              "blocks" : [
+                {
+                  "depth" : 0,
+                  "inlineStyleRanges" : [
+                    {
+                      "length" : 12,
+                      "style" : "LETTERSPACING:0",
+                      "offset" : 0
+                    },
+                    {
+                      "length" : 12,
+                      "style" : "LINEHEIGHT:1.2",
+                      "offset" : 0
+                    },
+                    {
+                      "length" : 12,
+                      "style" : "FONT:WorkSans-Medium",
+                      "offset" : 0
+                    },
+                    {
+                      "length" : 12,
+                      "style" : "SIZE:13",
+                      "offset" : 0
+                    },
+                    {
+                      "length" : 12,
+                      "style" : "COLOR:rgba(47, 77, 255, 1.00)",
+                      "offset" : 0
+                    },
+                    {
+                      "length" : 12,
+                      "style" : "ALIGN:center",
+                      "offset" : 0
+                    }
+                  ],
+                  "entityRanges" : [
+
+                  ],
+                  "data" : {
+                    "emptyStyle" : [
+                      "LETTERSPACING:0",
+                      "LINEHEIGHT:1.2",
+                      "FONT:WorkSans-Medium",
+                      "SIZE:13",
+                      "COLOR:rgba(47, 77, 255, 1.00)",
+                      "ALIGN:center"
+                    ]
+                  },
+                  "text" : "Bulk Options",
+                  "key" : "ffr94",
+                  "type" : "unstyled"
+                }
+              ],
+              "__class" : "StyledTextDraft"
+            },
+            "blendingMode" : "normal",
+            "invert" : 0,
+            "sepia" : 0,
+            "centerAnchorX" : 0.488,
+            "blurEnabled" : 0,
+            "shadows" : [
+
+            ],
+            "parentid" : "s_uOlQQEX",
+            "brightnessEnabled" : 0,
+            "exportOptions" : [
+
+            ],
+            "name" : null,
+            "saturate" : 100,
+            "height" : 15,
+            "blendingEnabled" : 0,
+            "top" : 253,
+            "constraintsLocked" : false,
+            "right" : null,
+            "visible" : true,
+            "centerAnchorY" : 0.3905547226386807,
+            "contrast" : 100,
+            "grayScaleEnabled" : 0,
+            "hueRotate" : 0,
+            "heightFactor" : null,
+            "targetName" : null,
+            "bottom" : null,
+            "blur" : 12,
+            "autoSize" : true,
+            "invertEnabled" : 0,
+            "width" : 83,
+            "brightness" : 100
           }
         ],
         "centerAnchorX" : 0.5,
@@ -9898,11 +10233,11 @@
                 "styledText" : {
                   "cached" : {
                     "size" : {
-                      "width" : 257,
+                      "width" : 132,
                       "height" : 19
                     },
                     "os" : "10_12",
-                    "width" : 256,
+                    "width" : 0,
                     "html" : "<span data-offset-key=\"ffr94-0-0\" style=\"tab-size:4;font-family:&quot;WorkSans-Medium&quot;, &quot;Work Sans&quot;, sans-serif;-webkit-text-fill-color:hsl(0, 0%, 100%);font-size:16px;letter-spacing:0px;line-height:1.2;font-weight:500\"><span data-text=\"true\">Purchase Shares<\/span><\/span>"
                   },
                   "entityMap" : {
@@ -9913,34 +10248,34 @@
                       "depth" : 0,
                       "inlineStyleRanges" : [
                         {
+                          "length" : 15,
                           "style" : "LETTERSPACING:0",
-                          "offset" : 0,
-                          "length" : 15
+                          "offset" : 0
                         },
                         {
+                          "length" : 15,
                           "style" : "LINEHEIGHT:1.2",
-                          "offset" : 0,
-                          "length" : 15
+                          "offset" : 0
                         },
                         {
+                          "length" : 15,
                           "style" : "FONT:WorkSans-Medium",
-                          "offset" : 0,
-                          "length" : 15
+                          "offset" : 0
                         },
                         {
+                          "length" : 15,
                           "style" : "SIZE:16",
-                          "offset" : 0,
-                          "length" : 15
+                          "offset" : 0
                         },
                         {
+                          "length" : 15,
                           "style" : "ALIGN:center",
-                          "offset" : 0,
-                          "length" : 15
+                          "offset" : 0
                         },
                         {
+                          "length" : 15,
                           "style" : "COLOR:hsl(0, 0%, 100%)",
-                          "offset" : 0,
-                          "length" : 15
+                          "offset" : 0
                         }
                       ],
                       "entityRanges" : [
