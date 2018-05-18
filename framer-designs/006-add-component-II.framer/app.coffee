@@ -2,6 +2,7 @@
 # Style Variables ----------------------------------
 spacer = 20
 blue = "#1603D3"
+lightBlue = "#D6DCFA"
 
 
 # Data ---------------------------------------------
@@ -13,9 +14,8 @@ actionAmount = 0
 indicatorCont.x = Align.center()
 indicatorCont.y = Align.center()
 
-# indicatorFill.x = Align.center()
-# indicatorFill.y = Align.center()
-# indicatorFill.parent = indicatorCont
+shape.x = Align.center()
+shape.y = Align.top(0)
 
 
 minusBtn.y = Align.center()
@@ -23,9 +23,6 @@ minusBtn.x = Align.center(0)
 
 addBtn.y = Align.center()
 addBtn.x = Align.center(0)
-
-# actionBtn.y = Align.center()
-# actionBtn.x = Align.center(0)
 
 actionBtnLabelCancel.y = Align.bottom(spacer*2)
 
@@ -35,8 +32,8 @@ actionBtnLabelCancel.y = Align.bottom(spacer*2)
 actionLabel = new TextLayer
 	parent: indicatorCont
 	x: Align.center()
-	y: Align.center(-spacer)
-	fontSize: 102
+	y: Align.center(-spacer/2)
+	fontSize: 72
 	text: actionAmount 
 	color: blue
 
@@ -44,18 +41,31 @@ unitLabel = new TextLayer
 	parent: indicatorCont
 	x: Align.center()
 	y: Align.center(spacer*2)
-	fontSize: 24
+	fontSize: 14
 	text: "cups" 
 	color: blue
+	
+# svg = new SVGLayer
+# 	svg: "<svg><path id='shape' name='Rectangle' d='M0 0 H 150 V 75 H 0 L 0 0' />"
+# 	fill: "#0AF"
+ 
+# path = svg.elements.shape
+shape.strokeWidth = 4
+shape.strokeColor = blue
+shape.fill = lightBlue
+
 
 # Component - States -------------------------------
+shape.states =
+	active:
+		x: 0
 minusBtn.states =
 	active:
-		x: Align.center(-indicatorCont.width/1.5)
+		x: Align.center(-indicatorCont.width/1.25)
 		
 addBtn.states =
 	active:
-		x: Align.center(indicatorCont.width/1.5)
+		x: Align.center(indicatorCont.width/1.25)
 
 actionBtn.states =
 	active:
@@ -109,23 +119,19 @@ actionLabel.animationOptions = addBtn.animationOptions
 
 # Component - Interactions -----------------------
 indicatorCont.onTap ->
+	shape.stateCycle()
 	minusBtn.stateCycle()
 	addBtn.stateCycle()
 	actionBtnLabel.stateCycle()
 	actionBtnLabelCancel.stateCycle()
 	actionBtn.stateCycle()
 
-
-actionAmount = 0
-
-
-
 addBtn.onTap ->
 	actionAmount += 1;	
 	actionLabel.text = actionAmount
 	actionLabel.x = Align.center()
-# 	indicatorFill.y = ((indicatorCont.height) - (actionAmount*10))
 	indicatorFill.height = actionAmount * 25
+	shape.height = actionAmount * 25
 	
 	if indicatorFill.height > indicatorCont.height
 		indicatorCont.stateCycle("goalMet")
@@ -134,8 +140,6 @@ addBtn.onTap ->
 		unitLabel.stateCycle("goalMet")
 		print "fuck Yeah"
 	else 
-# 		indicatorFill.opacity = 0
-# 		indicatorCont.stateCycle()
 		print "keep drinking"
 	
 
@@ -145,19 +149,15 @@ minusBtn.onTap ->
 	actionAmount -= 1;
 	actionLabel.text = actionAmount
 	actionLabel.x = Align.center()
-# 	indicatorFill.y = (-(actionAmount*10))
 	indicatorFill.height = actionAmount * 25
 	
 	if indicatorFill.height < indicatorCont.height
-		
 		indicatorFill.stateCycle("goalNotMet")
 		indicatorCont.stateCycle("goalNotMet")
 		actionLabel.stateCycle("goalNotMet")
 		unitLabel.stateCycle("goalNotMet")
 		print "fuck Yeah"
 	else 
-# 		indicatorFill.opacity = 0
-# 		indicatorCont.stateCycle()
 		print "keep drinking"
 
 
