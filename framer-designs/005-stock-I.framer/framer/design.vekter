@@ -4941,33 +4941,33 @@
                   "depth" : 0,
                   "inlineStyleRanges" : [
                     {
-                      "length" : 18,
                       "style" : "LETTERSPACING:0",
+                      "length" : 18,
                       "offset" : 0
                     },
                     {
-                      "length" : 18,
                       "style" : "LINEHEIGHT:1.2",
+                      "length" : 18,
                       "offset" : 0
                     },
                     {
-                      "length" : 18,
                       "style" : "FONT:WorkSans-Medium",
+                      "length" : 18,
                       "offset" : 0
                     },
                     {
-                      "length" : 18,
                       "style" : "COLOR:rgba(22, 3, 211, 1.00)",
+                      "length" : 18,
                       "offset" : 0
                     },
                     {
-                      "length" : 18,
                       "style" : "SIZE:22",
+                      "length" : 18,
                       "offset" : 0
                     },
                     {
-                      "length" : 18,
                       "style" : "ALIGN:center",
+                      "length" : 18,
                       "offset" : 0
                     }
                   ],
@@ -5119,33 +5119,33 @@
                           "depth" : 0,
                           "inlineStyleRanges" : [
                             {
-                              "length" : 15,
                               "style" : "LETTERSPACING:0",
+                              "length" : 15,
                               "offset" : 0
                             },
                             {
-                              "length" : 15,
                               "style" : "LINEHEIGHT:1.2",
+                              "length" : 15,
                               "offset" : 0
                             },
                             {
-                              "length" : 15,
                               "style" : "FONT:WorkSans-Medium",
+                              "length" : 15,
                               "offset" : 0
                             },
                             {
-                              "length" : 15,
                               "style" : "SIZE:16",
+                              "length" : 15,
                               "offset" : 0
                             },
                             {
-                              "length" : 15,
                               "style" : "ALIGN:center",
+                              "length" : 15,
                               "offset" : 0
                             },
                             {
-                              "length" : 15,
                               "style" : "COLOR:hsl(0, 0%, 100%)",
+                              "length" : 15,
                               "offset" : 0
                             }
                           ],
@@ -8936,33 +8936,33 @@
                       "depth" : 0,
                       "inlineStyleRanges" : [
                         {
-                          "length" : 2,
                           "style" : "LETTERSPACING:0",
+                          "length" : 2,
                           "offset" : 0
                         },
                         {
-                          "length" : 2,
                           "style" : "LINEHEIGHT:1.2",
+                          "length" : 2,
                           "offset" : 0
                         },
                         {
-                          "length" : 2,
                           "style" : "FONT:WorkSans-Medium",
+                          "length" : 2,
                           "offset" : 0
                         },
                         {
-                          "length" : 2,
                           "style" : "ALIGN:center",
+                          "length" : 2,
                           "offset" : 0
                         },
                         {
-                          "length" : 2,
                           "style" : "SIZE:18",
+                          "length" : 2,
                           "offset" : 0
                         },
                         {
-                          "length" : 2,
                           "style" : "COLOR:rgba(47, 76, 255, 1.00)",
+                          "length" : 2,
                           "offset" : 0
                         }
                       ],
@@ -9639,33 +9639,33 @@
                   "depth" : 0,
                   "inlineStyleRanges" : [
                     {
-                      "length" : 3,
                       "style" : "LINEHEIGHT:1.2",
+                      "length" : 3,
                       "offset" : 0
                     },
                     {
-                      "length" : 3,
                       "style" : "FONT:WorkSans-Medium",
+                      "length" : 3,
                       "offset" : 0
                     },
                     {
-                      "length" : 3,
                       "style" : "COLOR:rgba(48, 78, 255, 1.00)",
+                      "length" : 3,
                       "offset" : 0
                     },
                     {
-                      "length" : 3,
                       "style" : "LETTERSPACING:0",
+                      "length" : 3,
                       "offset" : 0
                     },
                     {
-                      "length" : 3,
                       "style" : "SIZE:68",
+                      "length" : 3,
                       "offset" : 0
                     },
                     {
-                      "length" : 3,
                       "style" : "ALIGN:center",
+                      "length" : 3,
                       "offset" : 0
                     }
                   ],
@@ -9857,33 +9857,33 @@
                   "depth" : 0,
                   "inlineStyleRanges" : [
                     {
-                      "length" : 12,
                       "style" : "LETTERSPACING:0",
+                      "length" : 12,
                       "offset" : 0
                     },
                     {
-                      "length" : 12,
                       "style" : "LINEHEIGHT:1.2",
+                      "length" : 12,
                       "offset" : 0
                     },
                     {
-                      "length" : 12,
                       "style" : "FONT:WorkSans-Medium",
+                      "length" : 12,
                       "offset" : 0
                     },
                     {
-                      "length" : 12,
                       "style" : "SIZE:13",
+                      "length" : 12,
                       "offset" : 0
                     },
                     {
-                      "length" : 12,
                       "style" : "COLOR:rgba(47, 77, 255, 1.00)",
+                      "length" : 12,
                       "offset" : 0
                     },
                     {
-                      "length" : 12,
                       "style" : "ALIGN:center",
+                      "length" : 12,
                       "offset" : 0
                     }
                   ],
@@ -10075,33 +10075,33 @@
                   "depth" : 0,
                   "inlineStyleRanges" : [
                     {
-                      "length" : 18,
                       "style" : "LETTERSPACING:0",
+                      "length" : 18,
                       "offset" : 0
                     },
                     {
-                      "length" : 18,
                       "style" : "LINEHEIGHT:1.2",
+                      "length" : 18,
                       "offset" : 0
                     },
                     {
-                      "length" : 18,
                       "style" : "FONT:WorkSans-Medium",
+                      "length" : 18,
                       "offset" : 0
                     },
                     {
-                      "length" : 18,
                       "style" : "COLOR:rgba(22, 3, 211, 1.00)",
+                      "length" : 18,
                       "offset" : 0
                     },
                     {
-                      "length" : 18,
                       "style" : "SIZE:22",
+                      "length" : 18,
                       "offset" : 0
                     },
                     {
-                      "length" : 18,
                       "style" : "ALIGN:center",
+                      "length" : 18,
                       "offset" : 0
                     }
                   ],
@@ -10233,11 +10233,11 @@
                 "styledText" : {
                   "cached" : {
                     "size" : {
-                      "width" : 132,
+                      "width" : 257,
                       "height" : 19
                     },
                     "os" : "10_12",
-                    "width" : 0,
+                    "width" : 256,
                     "html" : "<span data-offset-key=\"ffr94-0-0\" style=\"tab-size:4;font-family:&quot;WorkSans-Medium&quot;, &quot;Work Sans&quot;, sans-serif;-webkit-text-fill-color:hsl(0, 0%, 100%);font-size:16px;letter-spacing:0px;line-height:1.2;font-weight:500\"><span data-text=\"true\">Purchase Shares<\/span><\/span>"
                   },
                   "entityMap" : {
@@ -10248,34 +10248,34 @@
                       "depth" : 0,
                       "inlineStyleRanges" : [
                         {
-                          "length" : 15,
                           "style" : "LETTERSPACING:0",
-                          "offset" : 0
+                          "offset" : 0,
+                          "length" : 15
                         },
                         {
-                          "length" : 15,
                           "style" : "LINEHEIGHT:1.2",
-                          "offset" : 0
+                          "offset" : 0,
+                          "length" : 15
                         },
                         {
-                          "length" : 15,
                           "style" : "FONT:WorkSans-Medium",
-                          "offset" : 0
+                          "offset" : 0,
+                          "length" : 15
                         },
                         {
-                          "length" : 15,
                           "style" : "SIZE:16",
-                          "offset" : 0
+                          "offset" : 0,
+                          "length" : 15
                         },
                         {
-                          "length" : 15,
                           "style" : "ALIGN:center",
-                          "offset" : 0
+                          "offset" : 0,
+                          "length" : 15
                         },
                         {
-                          "length" : 15,
                           "style" : "COLOR:hsl(0, 0%, 100%)",
-                          "offset" : 0
+                          "offset" : 0,
+                          "length" : 15
                         }
                       ],
                       "entityRanges" : [
@@ -13039,33 +13039,33 @@
                   "depth" : 0,
                   "inlineStyleRanges" : [
                     {
-                      "length" : 2,
                       "style" : "LETTERSPACING:0",
+                      "length" : 2,
                       "offset" : 0
                     },
                     {
-                      "length" : 2,
                       "style" : "LINEHEIGHT:1.2",
+                      "length" : 2,
                       "offset" : 0
                     },
                     {
-                      "length" : 2,
                       "style" : "FONT:WorkSans-Medium",
+                      "length" : 2,
                       "offset" : 0
                     },
                     {
-                      "length" : 2,
                       "style" : "ALIGN:center",
+                      "length" : 2,
                       "offset" : 0
                     },
                     {
-                      "length" : 2,
                       "style" : "SIZE:18",
+                      "length" : 2,
                       "offset" : 0
                     },
                     {
-                      "length" : 2,
                       "style" : "COLOR:rgba(47, 76, 255, 1.00)",
+                      "length" : 2,
                       "offset" : 0
                     }
                   ],
@@ -13492,33 +13492,33 @@
                   "depth" : 0,
                   "inlineStyleRanges" : [
                     {
-                      "length" : 3,
                       "style" : "LINEHEIGHT:1.2",
+                      "length" : 3,
                       "offset" : 0
                     },
                     {
-                      "length" : 3,
                       "style" : "FONT:WorkSans-Medium",
+                      "length" : 3,
                       "offset" : 0
                     },
                     {
-                      "length" : 3,
                       "style" : "COLOR:rgba(48, 78, 255, 1.00)",
+                      "length" : 3,
                       "offset" : 0
                     },
                     {
-                      "length" : 3,
                       "style" : "LETTERSPACING:0",
+                      "length" : 3,
                       "offset" : 0
                     },
                     {
-                      "length" : 3,
                       "style" : "SIZE:68",
+                      "length" : 3,
                       "offset" : 0
                     },
                     {
-                      "length" : 3,
                       "style" : "ALIGN:center",
+                      "length" : 3,
                       "offset" : 0
                     }
                   ],
@@ -13710,33 +13710,33 @@
                   "depth" : 0,
                   "inlineStyleRanges" : [
                     {
-                      "length" : 12,
                       "style" : "LETTERSPACING:0",
+                      "length" : 12,
                       "offset" : 0
                     },
                     {
-                      "length" : 12,
                       "style" : "LINEHEIGHT:1.2",
+                      "length" : 12,
                       "offset" : 0
                     },
                     {
-                      "length" : 12,
                       "style" : "FONT:WorkSans-Medium",
+                      "length" : 12,
                       "offset" : 0
                     },
                     {
-                      "length" : 12,
                       "style" : "SIZE:13",
+                      "length" : 12,
                       "offset" : 0
                     },
                     {
-                      "length" : 12,
                       "style" : "COLOR:rgba(47, 77, 255, 1.00)",
+                      "length" : 12,
                       "offset" : 0
                     },
                     {
-                      "length" : 12,
                       "style" : "ALIGN:center",
+                      "length" : 12,
                       "offset" : 0
                     }
                   ],
