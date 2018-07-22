@@ -3,7 +3,7 @@
 
 
 
-Running Sketchbook for Framer interactions and useful basics, tips, and tricks.
+Running Sketchbook for Framer interactions, basic concepts, tips, and tricks.
 
 ---------
 
