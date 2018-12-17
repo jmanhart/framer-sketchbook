@@ -12,12 +12,12 @@ green04 = "rgb(25, 97, 39)"
 
 # Random Color Arry - This is Rough :(
 randomColor = [
-	gray, 
-	gray, 
-	gray, 
-	gray, 
-	gray, 
-	gray, 
+# 	gray, 
+# 	gray, 
+# 	gray, 
+# 	gray, 
+# 	gray, 
+# 	gray, 
 	green01, 
 	green01, 
 	green01, 
@@ -47,12 +47,17 @@ tileOffset = tileWidth + gutter
 
 
 randomBackgroundColor = () ->
-	Utils.debounce 1, ->
-		Utils.randomChoice(randomColor)
+	Utils.randomChoice(randomColor)
 
 scroll = new ScrollComponent
 	size: Screen.size
 	scrollHorizontal: false
+
+tiles = []
+
+updateBackgroundColor = () ->
+	Utils.randomChoice(randomColor)
+
 
 # Loop to create grid tiles
 for index in [0...tileCount]
@@ -66,6 +71,59 @@ for index in [0...tileCount]
 		size: tileWidth
 		borderRadius: 0
 		parent: scroll.content
-		backgroundColor: randomBackgroundColor()
+		backgroundColor: updateBackgroundColor()
+		
+	tiles.push(tile)
+	
+tiles[182].backgroundColor = gray
+tiles[185].backgroundColor = gray
+
+# tiles[234].backgroundColor = gray
+tiles[286].backgroundColor = gray
+tiles[287].backgroundColor = gray
+tiles[288].backgroundColor = gray
+tiles[289].backgroundColor = gray
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+# 	tile.states =
+# 		active:
+# 			backgroundColor: randomBackgroundColor()
+# 		inActive:
+# 			backgroundColor: randomBackgroundColor()
+# 			
+# 	tile.animationOptions =
+# 		curve: Spring
+		
+# 	do(tile) ->	
+# 		Utils.delay 1, ->
+# 			tile.stateCycle("active", "inActive")
+			
+	
 
 
