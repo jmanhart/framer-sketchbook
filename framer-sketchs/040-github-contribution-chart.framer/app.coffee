@@ -75,14 +75,6 @@ for index in [0...tileCount]
 		
 	tiles.push(tile)
 	
-tiles[182].backgroundColor = gray
-tiles[185].backgroundColor = gray
-
-# tiles[234].backgroundColor = gray
-tiles[286].backgroundColor = gray
-tiles[287].backgroundColor = gray
-tiles[288].backgroundColor = gray
-tiles[289].backgroundColor = gray
 		
 	
 		
