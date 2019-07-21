@@ -1,0 +1,19 @@
+{
+	"main": "dist/index.js",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/react": "^16.8"
+	},
+	"peerDependencies": {
+		"framer": "^1.0",
+		"react": "^16.8"
+	},
+	"framer": {
+		"id": "752a1d47-3114-4ed6-ae9b-2106f22799b4"
+	},
+	"author": "John Manhart",
+	"dependencies": {
+		"@emotion/core": "^10.0.14",
+		"@emotion/styled": "^10.0.14"
+	}
+}
